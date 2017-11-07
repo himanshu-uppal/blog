@@ -11,6 +11,25 @@
 |
 */
 
+Route::group(['middleware'=>['web']],function(){
+
+	//Blog 
+	Route::get('blog/{slug}','BlogController@getSingle')->where('slug','[\w\d\-\_]+')->name('blog.single');
+	Route::get('blog','BlogController@getIndex')->name('blog.index');
+
+	//Pages
+	Route::get('/', 'PagesController@getIndex');
+	Route::get('about', 'PagesController@getContactAbout');
+	Route::get('contact', 'PagesController@getContact');
+	Route::post('contact', 'PagesController@postContact')->name('contact.post');
+
+	//Post
+	Route::resource('posts','PostController');
+});
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
