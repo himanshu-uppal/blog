@@ -28,4 +28,11 @@ class Admin extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function comments(){
+        return $this->morphMany('App\Comment','author');
+    }
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 use Session;
+use Input;
 
 class PostController extends Controller
 {
-      public function __construct()
+    public function __construct()
     {
         $this->middleware('auth:admin');
     }
@@ -31,7 +33,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        $categories = Category::all(['category','id']);
+       // $status = Status::all(['status','id']);        
+        return view('admin.posts.create')->withCategories($categories);
     }
 
     /**
@@ -53,14 +57,25 @@ class PostController extends Controller
         $post->title=$request->title;
         $post->slug = $request->slug;
         $post->content=$request->body;
-        $post->exerpt="exerpt";
+        $post->excerpt="excerpt";
 
-        $post->save();
+        $category=$request->input('category');
+       
+       
+    foreach($category as $c){
+            printf($c);
+
+        }
+
+        
+
+
+        //$post->save();
 
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');
 
-        return redirect()->route('posts.show',$post->id);
+        //return redirect()->route('posts.show',$post->id);
     }
 
     /**
@@ -72,7 +87,12 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('admin.posts.show')->withPost($post);
+        $comments = $post->comments;
+        $categories= $post->categories;
+
+
+        
+        return view('admin.posts.show')->withPost($post)->withComments($comments)->withCategories($categories);
     }
 
     /**

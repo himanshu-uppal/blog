@@ -1,0 +1,8 @@
+<select class="form-control" name="category">
+    				@foreach($statuses as $status)
+      					<option value="{{$status->id}}">{{$status->status}}</option>
+    				@endforeach
+    			</select>
+
+    			<input type="checkbox" name="category[]" id="{{$category->id}}" /> 
+      <label for="{{$category->id}}">-{{$category->category}}</label>

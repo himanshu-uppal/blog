@@ -1,4 +1,5 @@
-@if(Session::has('success'))
+<div class="center">
+	@if(Session::has('success'))
 <div class="alert alert-success" role="alert">
   <strong>Success:</strong> {{ Session::get('success') }}
 </div>
@@ -15,3 +16,4 @@
 	</ul> 
 </div>
 @endif
+</div>

@@ -11,7 +11,7 @@
 <main>
 	<div class="container ">
 		<h2>Create New Post</h2>
-		{!! Form::open(array('route'=>'posts.store','data-parsley-validate'=>'true')) !!}
+		{!! Form::open(array('route'=>'posts.store','data-parsley-validate'=>'true','method'=>'POST')) !!}
 		<div class="row">
 			<div class="input-field col s6">
 				{{ Form::label('title','Post Title')}}
@@ -33,6 +33,52 @@
 				</script>
 			</div>
 		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				{{ Form::label('excerpt','Excerpt:')}}
+				{{ Form::textarea('excerpt',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				{{ Form::label('tags','Post Hash tags:')}}
+				{{ Form::textarea('tags',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				{{ Form::label('status','Post Status:')}}</br></br>
+				
+				
+			</div>
+		</div>	
+		
+		
+		<div class="row">
+			{{ Form::label('category',' Post Category:')}}
+		
+			</br></br>
+			
+
+
+				
+				<table>
+					<tbody>
+    				@foreach($categories as $category)
+    				<tr>
+    					
+
+        <td>
+        	
+        	<input type="checkbox" name="category[]" id="{{$category->id}}" /> 
+      <label for="{{$category->id}}">-{{$category->category}}</label></td>
+  </tr>
+    				@endforeach
+    			</tbody>
+    			</table>
+    		
+			
+		</div>	
 		<div class="row">
 			<div class="input-field col s6">
 				{{ Form::submit('Create Post',array('class'=>'btn green lighten-1 waves-effect waves-light'))}}
