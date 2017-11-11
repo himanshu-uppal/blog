@@ -12,6 +12,7 @@
 		<div class="col s7">
 	<h5>{{ $post->title }}</h5>
 	<p>{{ $post->tags }}</p>
+	<p>{{ $post->admin->name }}</p>
 	<p>
 	{{ date('F d, Y', strtotime($post->published_at)) }}
 
@@ -23,6 +24,7 @@
 	</p>
 	<p>{{ $post->excerpt }}</p>
 	<p>{{ $post->content }}</p>
+	
 
 	
 	<p>
@@ -49,12 +51,14 @@
 		<div class="col s6">
 		<a href="{{ route('posts.edit',$post->id) }}" class="waves-effect waves-light btn">Edit</a>
 	</div>
+	@can('delete',$post)
 		<div class="col s6">
 				<!-- Modal Trigger -->
     <a class="waves-effect waves-light btn modal-trigger" href="#modal-delete">Delete</a>
 
 			
 		</div>
+		@endcan
 	</div>
 
 

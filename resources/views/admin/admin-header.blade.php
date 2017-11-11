@@ -62,8 +62,8 @@
                   <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Media</a>
                     <div class="collapsible-body">
                       <ul>
-                        <li><a href="#">Library</a></li>
-                        <li><a href="{{route('posts.create')}}">Add New</a></li>                     
+                        <li><a href="{{route('media.index')}}">Library</a></li>
+                        <li><a href="{{route('media.create')}}">Add New</a></li>                     
                       </ul>
                     </div>
                   </li>
@@ -75,12 +75,35 @@
 
 
 
-        <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Media</a>
+       <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Authorization</a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="#">Library</a></li>
-              <li><a href="#">Add New</a></li>
-
+              <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                  <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Role</a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li><a href="{{route('roles.index')}}">All Roles</a></li>
+                        <li><a href="{{route('roles.create')}}">Add New Role</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>  
+               <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                  <li class="bold"><a href="#!" class="collapsible-header  waves-effect waves-teal">Permission</a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li><a href="{{route('permissions.index')}}">All Permissions</a></li>
+                        <li><a href="{{route('permissions.create')}}">Add new Permission</a></li>                   
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li> 
+                
+            
             </ul>
           </div>
         </li>
@@ -124,7 +147,7 @@
       </ul>
     </li>
   </ul>
-</div>
+
 
 
 

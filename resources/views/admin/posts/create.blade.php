@@ -70,7 +70,7 @@
 
         <td>
         	
-        	<input type="checkbox" name="category[]" id="{{$category->id}}" /> 
+        	<input type="checkbox" id="category[]" name="category[]" value="{{$category->id}}" /> 
       <label for="{{$category->id}}">-{{$category->category}}</label></td>
   </tr>
     				@endforeach

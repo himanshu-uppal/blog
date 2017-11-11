@@ -35,4 +35,60 @@ class Admin extends Authenticatable
     public function posts(){
         return $this->hasMany('App\Post');
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    /**
+     * Checks if User has access to $permissions.
+     */
+    public function hasAccess(array $permissions) : bool
+    {
+        $permissionIds = array();
+        foreach($permissions as $permission){
+            $permission_id = Permission::where('name',$permission)->select('id')->first();
+            $permissionIds[]=$permission_id;
+
+        }
+        //dd($permissionIds);
+        // check if the permission is available in any role
+        foreach ($this->roles as $role) {
+            if($role->hasAccess($permissionIds)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Checks if the user belongs to role.
+     */
+    public function inRole(string $role)
+    {
+        return $this->roles()->where('name', $role)->count() == 1;
+    }
+
+     /**
+     *Returns the array of ids of all permissions that this admin is assigned 
+     */
+     public function permissions() 
+    {
+        $permissions = array();
+        $roles = $this->roles;
+        foreach($roles as $role){
+            foreach($role->permissions as $permission){
+                 if (!in_array($permission->id, $permissions))
+                    {
+                        $permissions[] = $permission->id; 
+                    }
+                }      
+
+        }
+        return $permissions;        
+    }
+
+
+    
 }

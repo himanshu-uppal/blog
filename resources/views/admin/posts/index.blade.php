@@ -33,15 +33,20 @@
 			@foreach($posts as $post)
 	<tr>
 		<th>{{ $post->id }}</th>
-		<td>Author</td>
+		<td>{{ $post->admin->name }}</td>
 		<td>{{ $post->title }}</td>
-		<td><a href="{{ url($post->slug) }}">{{ $post->slug }}</a></td>
+		<td><a href="{{ route('blog.single',$post->slug)}}">{{ $post->slug }}</a></td>
 		<td>{{ date('F d, Y', strtotime($post->created_at)) }}</td>
 		<td>{{ date('F d, Y', strtotime($post->published_at)) }}</td>
 		<td>Status</td>
 		<td>
 			<a href="{{ route('posts.show',$post->id) }}" class="btn ">View</a>
-			<a href="{{ route('posts.edit',$post->id) }}" class="btn ">Edit</a>
+			
+			@can('update', $post)
+			
+   <a href="{{ route('posts.edit',$post->id) }}" class="btn ">Edit</a>
+@endcan
+			
 		</td>		
 	</tr>
 	@endforeach

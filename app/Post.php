@@ -20,7 +20,7 @@ class Post extends Model
         return $this->hasMany('App\Comment');
     }
 
-    public function author(){
+    public function admin(){
     	return $this->belongsTo('App\Admin');
     }
    

@@ -7,6 +7,7 @@ use App\Post;
 use App\Category;
 use Session;
 use Input;
+use Gate;
 
 class PostController extends Controller
 {
@@ -33,9 +34,15 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories = Category::all(['category','id']);
+      
+    if(Gate::allows('create-post', Post::class)){
+         $categories = Category::all(['category','id']);
        // $status = Status::all(['status','id']);        
         return view('admin.posts.create')->withCategories($categories);
+
+    }
+        
+       
     }
 
     /**
@@ -46,6 +53,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+         if(Gate::allows('create-post', Post::class)){
         $this->validate($request,[
             'title'=>'required|max:255',
             'slug'=>'required|alpha_dash|min:5|max:255|unique:posts,slug',
@@ -75,7 +83,8 @@ class PostController extends Controller
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');
 
-        //return redirect()->route('posts.show',$post->id);
+        return redirect()->route('posts.show',$post->id);
+    }
     }
 
     /**
@@ -104,8 +113,17 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+          $this->authorize('update', $post);
+//         if (Gate::allows('update-post', $post)) {
 
-        return view('admin.posts.edit')->withPost($post);
+//     return view('admin.posts.edit')->withPost($post);
+// }
+// else{
+//     printf("sorry");
+// }
+return view('admin.posts.edit')->withPost($post);
+
+        
     }
 
     /**

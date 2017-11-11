@@ -32,7 +32,7 @@
 	<tr>
 		<th>{{ $category->id }}</th>
 		<td>{{ $category->category}}</td>
-		<td>{{ $category->description }}</td>
+		<td>{{ substr($category->description,0,40) }}</td>
 		<td> post_count </td>	
 		
 		<td>
@@ -55,7 +55,7 @@
 
 	</table>
 	
-		   
+		   </div>
 	</div>
 </main>
 @endsection

@@ -13,6 +13,16 @@
 
 Route::group(['middleware'=>['web']],function(){
 
+
+	//Admin
+	Route::resource('admins','AdminController');
+
+	//Role
+	Route::resource('roles','RoleController');
+
+	//Permission
+	Route::resource('permissions','PermissionController',['except' => 'destroy']);
+
 	//Blog 
 	Route::get('blog/{slug}','BlogController@getSingle')->where('slug','[\w\d\-\_]+')->name('blog.single');
 	Route::get('blog','BlogController@getIndex')->name('blog.index');
@@ -28,6 +38,9 @@ Route::group(['middleware'=>['web']],function(){
 
 	//Category
 	Route::resource('categories','CategoryController');
+
+	//Media
+	Route::resource('media','MediaController');
 
 });
 
@@ -49,3 +62,15 @@ Route::prefix('admin')->group(function() {
 	Route::get('/', 'AdminController1@index')->name('admin.dashboard');
 	Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 });
+
+Route::get('image/{filename}', ['as' => 'image.show', 'uses' => function($filename){
+    $path = storage_path() . '/uploads/images/' . $filename;
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+}]);

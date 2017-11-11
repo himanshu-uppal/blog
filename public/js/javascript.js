@@ -1,5 +1,11 @@
  $(document).ready(function(){
 
+  //Show text typed in resource
+  $('.crud-resource').keyup(function(event) {
+    newText = event.target.value;
+    $('.permissions-slug').text(newText);
+  });
+
   // Initialize collapse button
   $(".button-collapse").sideNav();
   $('ul.tabs').tabs({
