@@ -17,7 +17,7 @@
 
         <title>Blog: @yield('title')</title>
         @yield('custom-styles')   
-        {!! Html::style('css/style.css') !!} 
+        {!! Html::style('css/admin-style.css') !!} 
         {!! Html::style('css/materialize.min.css') !!}  
         {!! Html::style('css/parsley.css') !!} 
            
