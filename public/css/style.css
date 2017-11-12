@@ -1277,12 +1277,24 @@ ul.pager {
     height: 100px;
   }
 
+  .title-text{
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .page-logo img{
+    width: 50px;
+    height: 50px;
+  }
+
   .profile-pic img{
     
     border-radius: 50%;
     width: 120px;
   
 
+  }
+  .chip{
+    width: 100px;
   }
 
 

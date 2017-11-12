@@ -77,7 +77,7 @@
 				
                 <div class="post-date"> <div class=" chip">
     <img src="{{ route('image.show',['himanshu.jpg']) }}" alt="Contact Person">
-    Himanshu Uppal
+    himanshu
   </div></div> 
               </div>
               <div class="post-tags">
