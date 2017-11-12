@@ -12,7 +12,7 @@
     </div></li> -->
     <h3>Dashboard</h3>
     <li><div class="divider"></div></li>
-    <li class="bold"><a href="{{route('admin.home')}}" class="waves-effect waves-teal">Home</a></li>
+    <li class="bold"><a href="{{route('admin.dashboard')}}" class="waves-effect waves-teal">Home</a></li>
     <li><div class="divider"></div></li>
 
     <li class="no-padding">
