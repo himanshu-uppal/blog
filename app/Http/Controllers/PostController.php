@@ -34,13 +34,15 @@ class PostController extends Controller
      */
     public function create()
     {
+
+         $this->authorize('create', Post::class);
       
-    if(Gate::allows('create-post', Post::class)){
+    
          $categories = Category::all(['category','id']);
        // $status = Status::all(['status','id']);        
         return view('admin.posts.create')->withCategories($categories);
 
-    }
+    
         
        
     }

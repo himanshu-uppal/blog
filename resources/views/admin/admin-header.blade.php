@@ -10,9 +10,9 @@
       <a href="#!name"><span class="white-text name">John Doe</span></a>
       <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
     </div></li> -->
-    <h4>Dashboard</h4>
+    <h3>Dashboard</h3>
     <li><div class="divider"></div></li>
-    <li class="bold"><a href="#" class="waves-effect waves-teal">Home</a></li>
+    <li class="bold"><a href="{{route('admin.home')}}" class="waves-effect waves-teal">Home</a></li>
     <li><div class="divider"></div></li>
 
     <li class="no-padding">
@@ -143,6 +143,9 @@
 
             </ul>
           </div>
+        </li>
+        <li class="bold"><a href="{{ route('admin.logout') }} " class="  waves-effect waves-teal">Logout</a>
+       
         </li>
       </ul>
     </li>

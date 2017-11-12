@@ -23,6 +23,6 @@ class AdminController1 extends Controller
      */
     public function index()
     {
-        return view('admin.admin-temp-content');
+        return view('admin.home');
     }
 }
