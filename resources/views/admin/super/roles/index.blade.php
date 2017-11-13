@@ -14,9 +14,11 @@
 		<div class="col s6">
 			<h3>All Roles</h3>
 		</div>	
+		@can('create',App\Role::class)
 		<div class="col s4 ">
 			<a href="{{route('roles.create')}}" class="btn blue">Add New role </a>
-		</div>		
+		</div>
+		@endcan		
 	</div>
 
 	 <div class="row">
@@ -30,13 +32,16 @@
           </br>
               <div class="row">
 				<div class="col s6">
+					@can('view',$role)
 					<a href="{{ route('roles.show',$role->id) }}" class="btn green lighten-1">Details</a>
-			
+			@endcan
 				</div>
+				@can('update',$role)
 				<div class="col s6">
 					<a href="{{ route('roles.edit',$role->id) }}" class="btn green lighten-1">Edit</a>
 			
 				</div>
+				@endcan
 				
 			</div>
             </div>

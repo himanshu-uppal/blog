@@ -10,12 +10,24 @@ use Session;
 class RoleController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        $this->authorize('view',new Role());
         $roles = Role::all();
         return view('admin.super.roles.index')->withRoles($roles);
     }
@@ -27,6 +39,7 @@ class RoleController extends Controller
      */
     public function create()
     {
+        $this->authorize('create',Role::class);
         $permissions = Permission::all();
         return view('admin.super.roles.create')->withPermissions($permissions);
     }
@@ -44,6 +57,7 @@ class RoleController extends Controller
                 'name' => 'required|max:255|alphadash|unique:permissions,name',
                 'description'=> 'sometimes|max:255'
                 ]);
+         $this->authorize('create',Role::class);
 
          $role= new Role();
          $role->role = $request->name;
@@ -64,6 +78,7 @@ class RoleController extends Controller
     public function show($id)
     {
         $role = Role::findOrFail($id);
+        $this->authorize('view',$role);
         $permissions = Permission::all();
         return view('admin.super.roles.show')->withRole($role)->withPermissions($permissions);
     }
@@ -77,6 +92,7 @@ class RoleController extends Controller
     public function edit($id)
     {
         $role = Role::findOrFail($id);
+        $this->authorize('update',$role);
         return view('admin.super.roles.edit')->withRole($role);
     }
 
@@ -94,6 +110,7 @@ class RoleController extends Controller
                 'name' => 'required|max:255|alphadash|unique:permissions,name',
                 'description'=> 'sometimes|max:255'
                 ]);
+          $this->authorize('update',$role);
 
          $role= Role::findOrFail($id);
          $role->role = $request->name;
@@ -113,6 +130,6 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->authorize('delete',$role);
     }
 }

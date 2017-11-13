@@ -22,7 +22,7 @@ class PostPolicy
    
     public function view(Admin $admin, Post $post)
     {
-        
+        return $admin->hasAccess(['view-post']);
     }
 
     /**
@@ -47,7 +47,14 @@ class PostPolicy
      */
     public function update(Admin $admin, Post $post)
     {
-        return $admin->hasAccess(['update-post']) or $admin->id == $post->admin_id;
+
+        if($admin->roles->first()->role == 'editor'){
+             return $admin->hasAccess(['update-post']) and $admin->id == $post->admin_id;
+        }
+        else{
+            return $admin->hasAccess(['update-post']);
+        }
+       
     
     }
 
@@ -61,5 +68,31 @@ class PostPolicy
     public function delete(Admin $admin, Post $post)
     {
         return $admin->hasAccess(['delete-post']);   
+    }
+
+     /**
+     * Determine whether the user can delete the post.
+     *
+     * @param  \App\Admin  $admin
+     * @param  \App\Post  $post
+     * @return mixed
+     */
+
+    public function permanentDelete(Admin $admin, Post $post)
+    {
+        return $admin->hasAccess(['perm-delete-post']);   
+    }
+
+     /**
+     * Determine whether the user can delete the post.
+     *
+     * @param  \App\Admin  $admin
+     * @param  \App\Post  $post
+     * @return mixed
+     */
+
+     public function restore(Admin $admin, Post $post)
+    {
+        return $admin->hasAccess(['restore-post']);   
     }
 }

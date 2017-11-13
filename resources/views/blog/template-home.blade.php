@@ -53,7 +53,7 @@
       <div class="col s12 m10 offset-m1 l8 offset-l2 ">
 
         <div class="page-header-title white-text">
-          <h1>lifeinsidebraces </h1> </br><h1>-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h1>
+          <h1>lifeinsidebraces </h1> </br><h4>-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h4>
         </div>
         <!-- <div class="meta">
           -lorem ipsum is lorem hitvh

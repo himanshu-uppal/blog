@@ -14,9 +14,11 @@
 		<div class="col s6">
 			<h3>All Categories</h3>
 		</div>	
+		@can('create',App\Category::class)
 		<div class="col s4 ">
 			<a href="{{route('categories.create')}}" class="btn blue">Add New category </a>
-		</div>		
+		</div>
+		@endcan		
 	</div>
 	
 	<table class="table">
@@ -37,15 +39,19 @@
 		
 		<td>
 			<div class="row">
+				@can('update',$category)
 				<div class="col s6">
 					<a href="{{ route('categories.edit',$category->id) }}" class="btn ">Edit</a>
 			
 				</div>
+				@endcan
+				@can('delete',$category)
 				<div class="col s6">
 					{!! Form::open(['route'=>['categories.destroy',$category->id],'method'=>'DELETE']) !!}
 	{!! Form::submit('Delete',['class'=>' btn']) !!}
 	{!! Form::close() !!}
 				</div>
+				@endcan
 			</div>
 			
 		</td>		

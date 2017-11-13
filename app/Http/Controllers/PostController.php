@@ -23,6 +23,7 @@ class PostController extends Controller
      */
     public function index()
     {
+        $this->authorize('view', new Post());
         $posts = Post::orderBy('id','DESC')->paginate(10);
         return view('admin.posts.index')->withPosts($posts);
     }
@@ -55,6 +56,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Post::class);
          if(Gate::allows('create-post', Post::class)){
         $this->validate($request,[
             'title'=>'required|max:255',
@@ -98,6 +100,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+        $this->authorize('view', $post);
         $comments = $post->comments;
         $categories= $post->categories;
 
@@ -115,14 +118,9 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-          $this->authorize('update', $post);
-//         if (Gate::allows('update-post', $post)) {
 
-//     return view('admin.posts.edit')->withPost($post);
-// }
-// else{
-//     printf("sorry");
-// }
+          $this->authorize('update', $post);
+
 return view('admin.posts.edit')->withPost($post);
 
         
@@ -155,7 +153,7 @@ return view('admin.posts.edit')->withPost($post);
          }
         
 
-       
+       $this->authorize('update', $post);
 
         $post->title=$request->title;
         $post->content=$request->content;
@@ -176,8 +174,11 @@ return view('admin.posts.edit')->withPost($post);
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {        
-        $post = Post::find($id); 
+    {    
+
+
+        $post = Post::find($id);
+         $this->authorize('delete', $post); 
         $post->delete();
         Session::flash('success','The blog post was successfully deleted !');
         return redirect()->route('posts.index');    

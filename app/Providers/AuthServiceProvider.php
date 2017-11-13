@@ -6,8 +6,16 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 use App\Post;
+use App\Category;
+use App\Permission;
+use App\Admin;
+use App\Role;
 
 use App\Policies\PostPolicy;
+use App\Policies\CategoryPolicy;
+use App\Policies\RolePolicy;
+use App\Policies\PermissionPolicy;
+use App\Policies\AdminPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,6 +29,10 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         'App\Model' => 'App\Policies\ModelPolicy',
         Post::class => PostPolicy::class,
+        Role::class => RolePolicy::class,
+        Category::class => CategoryPolicy::class,
+        Admin::class => AdminPolicy::class,
+        Permission::class => PermissionPolicy::class,
     
     ];
 
@@ -32,25 +44,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        //$this->registerPostPolicies();
-
-        //Gate::resource('posts', 'PostPolicy');
-
-        //
-
        
     }
 
-    public function registerPostPolicies()
-    {
-     Gate::define('create-post', function ($user) {
-       return $user->hasAccess(['create-post']);
-    });
-    Gate::define('update-post', function ($user, Post $post) {
-        return $user->hasAccess(['update-post']) or $user->id == $post->admin_id;
-    });
     
-}
-
    
 }

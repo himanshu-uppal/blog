@@ -12,10 +12,12 @@
 	<div class="row">
 		<div class="col s6">
 			<h3>All Posts</h3>
-		</div>	
+		</div>
+		@can('create',App\Post::class)	
 		<div class="col s4 ">
 			<a href="{{route('posts.create')}}" class="btn blue">Create New Post </a>
-		</div>		
+		</div>
+		@endcan		
 	</div>
 	
 	<table class="table">
@@ -40,8 +42,9 @@
 		<td>{{ date('F d, Y', strtotime($post->published_at)) }}</td>
 		<td>Status</td>
 		<td>
+			@can('view', $post)
 			<a href="{{ route('posts.show',$post->id) }}" class="btn ">View</a>
-			
+			@endcan
 			@can('update', $post)
 			
    <a href="{{ route('posts.edit',$post->id) }}" class="btn ">Edit</a>

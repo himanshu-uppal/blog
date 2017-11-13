@@ -12,23 +12,18 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        $role = new Role();
-        $role->role="admin";
-        $role->display_name="Admin";
-        $role->description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $role->save();
 
         $role = new Role();
         $role->role="super-admin";
         $role->display_name="Super Admin";
         $role->description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $role->save();
+        $role->save(); 
 
         $role = new Role();
-        $role->role="author";
-        $role->display_name="Author";
+        $role->role="admin";
+        $role->display_name="Admin";
         $role->description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $role->save();
+        $role->save();              
 
         $role = new Role();
         $role->role="editor";

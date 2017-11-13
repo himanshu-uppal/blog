@@ -48,9 +48,11 @@
 	</div>
 	
 	<div class="row">
+		@can('update', $post)
 		<div class="col s6">
 		<a href="{{ route('posts.edit',$post->id) }}" class="waves-effect waves-light btn">Edit</a>
 	</div>
+	@endcan
 	@can('delete',$post)
 		<div class="col s6">
 				<!-- Modal Trigger -->

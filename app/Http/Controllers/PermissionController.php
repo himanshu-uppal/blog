@@ -8,6 +8,18 @@ use Session;
 
 class PermissionController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +27,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
+        $this->authorize('view',new Permission());
         $permissions = Permission::all();
         return view('admin.super.permissions.index')->withPermissions($permissions);
     }
@@ -26,6 +39,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
+         $this->authorize('create',Permission::class);
         return view('admin.super.permissions.create');
     }
 
@@ -43,6 +57,8 @@ class PermissionController extends Controller
                 'name' => 'required|max:255|alphadash|unique:permissions,name',
                 'description'=> 'sometimes|max:255'
                 ]);
+
+             $this->authorize('create',Permission::class);
 
             $permission = new Permission();
             $permission->name = $request->name;
@@ -77,6 +93,7 @@ class PermissionController extends Controller
     public function show($id)
     {
         $permission = Permission::findOrFail($id);
+         $this->authorize('view',$permission);
         return view('admin.super.permissions.show')->withPermission($permission);
     }
 
@@ -89,6 +106,7 @@ class PermissionController extends Controller
     public function edit($id)
     {
        $permission = Permission::findOrFail($id);
+        $this->authorize('update',$permission);
     return view('admin.super.permissions.edit')->withPermission($permission);
     
     }
@@ -108,6 +126,7 @@ class PermissionController extends Controller
                 ]);
 
             $permission = Permission::findOrFail($id);
+            $this->authorize('update',$permission);
             $permission->display_name = $request->display_name;
             $permission->description = $request->description;
             $permission->save();
@@ -125,6 +144,6 @@ class PermissionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->authorize('delete',$permission);
     }
 }

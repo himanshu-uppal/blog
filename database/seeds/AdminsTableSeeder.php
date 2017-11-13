@@ -25,5 +25,12 @@ class AdminsTableSeeder extends Seeder
         $admin->job_title="";
         $admin->password=bcrypt('123456');
         $admin->save();
+
+        $admin= new Admin();
+        $admin->name="editor";
+        $admin->email="editor@gmail.com";
+        $admin->job_title="";
+        $admin->password=bcrypt('123456');
+        $admin->save();
     }
 }

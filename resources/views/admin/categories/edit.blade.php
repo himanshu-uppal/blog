@@ -37,10 +37,12 @@
 				<a href="{{ route('categories.show',$category->id) }}" class="btn red lighten-1 waves-effect waves-light">Cancel</a>
 	
 			</div>
+			@can('update',$category)
 			<div class="input-field col s6">
 				{!! Form::submit('Save Changes',['class'=>'btn green lighten-1 waves-effect waves-light']) !!}
 				{!! Form::close() !!}
 			</div>
+			@endcan
 		</div>
 
 
