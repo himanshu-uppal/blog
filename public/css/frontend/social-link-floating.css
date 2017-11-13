@@ -1,0 +1,18 @@
+/* Social Icons */
+#social_side_links {
+	position: fixed;
+  top: 20%;
+  left: 10%;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+
+}
+
+#social_side_links li{
+  margin: 20px 0;
+  
+}
+
+#social_side_links li a {display: block;}
+

@@ -28,14 +28,14 @@
   
 </head>
 <body >
-  <header class="header full-height" style="background: #aeea00 url('{{ route('image.show',['image6.jpg']) }}')">
+  <header class="header full-height" style="background: #aeea00 url('{{ route('image.show',['image8.jpg']) }}')">
    <nav>
     <div class="nav-wrapper white ">
       <a href="#!" class="brand-logo  light-green-text text-accent-3">lifeinsidebraces</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="grey-text material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down ">
         <li><a class="grey-text text-darken-1" href="#">About Us</a></li>
-        <li><a class="grey-text text-darken-1" href="#">Blog</a></li>
+        <li><a class="grey-text text-darken-1" href="{{ route('blog.index') }} ">Blog</a></li>
         <li><a class="grey-text text-darken-1" href="#">Our Team</a></li>
         <li><a class="grey-text text-darken-1" href="#">Contact Us</a></li>
         
@@ -53,7 +53,7 @@
       <div class="col s12 m10 offset-m1 l8 offset-l2 ">
 
         <div class="page-header-title white-text">
-          <h1>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h1>
+          <h1>lifeinsidebraces </h1> </br><h1>-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h1>
         </div>
         <!-- <div class="meta">
           -lorem ipsum is lorem hitvh
@@ -88,10 +88,11 @@
   
   <div class="posts">
     <div class="row">
-      <center><h4>Recommended Posts</h4></center>
+      <center><h4>Recent Posts</h4></center>
     </div>
     <div class="row">      
       <div class="col l4 s12 m6">
+        <a href="{{ route('blog.single',"hello") }}">
       <div class="card">
         <div class="card-image">
           <img src="{{ route('image.show',['image2.jpg']) }}">
@@ -102,9 +103,11 @@
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
+    </a>
        </div>
 
         <div class="col l4 s12 m6">
+          <a href="{{ route('blog.single',"hello") }}">
       <div class="card">
         <div class="card-image">
           <img src="{{ route('image.show',['image3.jpg']) }}">
@@ -115,9 +118,11 @@
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
+    </a>
        </div>
 
         <div class="col l4 s12 m6">
+          <a href="{{ route('blog.single',"hello") }}">
       <div class="card">
         <div class="card-image">
           <img src="{{ route('image.show',['image6.jpg']) }}">
@@ -128,9 +133,11 @@
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
+    </a>
        </div>
 
        <div class="col l4 s12 m6">
+        <a href="{{ route('blog.single',"hello") }}">
       <div class="card">
         <div class="card-image">
           <img src="{{ route('image.show',['image6.jpg']) }}">
@@ -141,9 +148,11 @@
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
+    </a>
        </div>
 
         <div class="col l4 s12 m6">
+          <a href="{{ route('blog.single',"hello") }}">
       <div class="card">
         <div class="card-image">
           <img src="{{ route('image.show',['image1.jpg']) }}">
@@ -154,9 +163,11 @@
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
+    </a>
        </div>
 
         <div class="col l4 s12 m6">
+          <a href="{{ route('blog.single',"hello") }}">
       <div class="card">
         <div class="card-image">
           <img src="{{ route('image.show',['image3.jpg']) }}">
@@ -167,6 +178,7 @@
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
+    </a>
        </div>
 
 

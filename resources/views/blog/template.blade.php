@@ -3,115 +3,105 @@
   <title>Lorem Ipsum
   </title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Bungee|NTR&amp;subset=latin-ext" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Exo+2:400,900|Exo:600" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.png" type="image/x-icon"/>
-  <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
- 
-         {!! Html::style('css/prism.css') !!}
-                {!! Html::style('css/style.css') !!}
-
+  
            <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
- 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:700|Titillium+Web:700|Exo+2:400,900" rel="stylesheet">
   
 
-  
+
+   
+
+    {!! Html::style('css/frontend/prism.css') !!}
+    {!! Html::style('css/frontend/style.css') !!}
+    {!! Html::style('css/frontend/materialize.css') !!}
+
 
   <script src="https://use.fontawesome.com/2b18a9f74f.js"></script>
-  <style>
+  
  
-
-  </style>
+  
 
   
 </head>
-<body class="body-class">
-  
-  <div class="header-area">
-    <div class="container">
-      <div class="page-title-indi">
-        <div class="page-logo">
-           <a href=""><img id="logo" class="page-logo-image-indi"   src="{{ route('image.show',['logo.png']) }}"> </a>
-        </div>
-        <div class="page-header">
-          <div class="title-area">
-
-          <div class="title-text"><a href="">lifeinsidebraces
-            <!--<img class="title-text-image" src="c1.jpg">--></a></div>
-        </div>
+<body >
+  <header class="header full-height" style="background: #aeea00 url('{{ route('image.show',['image6.jpg']) }}')">
+   <nav>
+    <div class="nav-wrapper white ">
+      <a href="#!" class="brand-logo  light-green-text text-accent-3">lifeinsidebraces</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="grey-text material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down ">
+        <li><a class="grey-text text-darken-1" href="#">About Us</a></li>
+        <li><a class="grey-text text-darken-1" href="#">Blog</a></li>
+        <li><a class="grey-text text-darken-1" href="#">Our Team</a></li>
+        <li><a class="grey-text text-darken-1" href="#">Contact Us</a></li>
         
-        </div>
-      </div>
-      
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
     </div>
-  </div>
-  
-  
+  </nav>
+  <div class="page-header-content  center ">
+    <div class="row">
+      <div class="col s12 m10 offset-m1 l8 offset-l2 ">
 
-  <div class="post-area">
-    <div class="container">
-      <div class="content">
-       <div class="primary-container-indi">
-          <div class="posts">
+        <div class="page-header-title white-text">
+          <h1>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h1>
+        </div>
+        <!-- <div class="meta">
+          -lorem ipsum is lorem hitvh
+        </div> -->
+        <!-- <div >
+          <img class="page-header-image" src="images/title.png" />
+       
+        </div> -->
 
-            <div class="the-post-indi"> 
-              <!-- <div class="page-image-area">
-    <div class="container">
-  <img class="page-image" src="images/image17.jpg" >
+      
+          
+        
+           
+        
+         
+      
+     
+      
 </div>
-  </div> -->
-              
+    </div>
+    
 
-              <div class="post-category-date">
-                <div class="post-categories">
-                  <div class="post-category"><a href="">laoreet</a> </div>
-                  <div class="post-category"><a href=""> vitae</a> </div>
-                  <div class="post-category"><a href="">venenatis </a> </div>
-                  <div class="post-category"><a href="">vitae</a> </div>
-                </div>
-				
-                <div class="post-date"> <div class=" chip">
-    <img src="{{ route('image.show',['himanshu.jpg']) }}" alt="Contact Person">
-    himanshu
-  </div></div> 
-              </div>
-              <div class="post-tags">
-                <div class="post-tag"><a href="">amet </a></div>
-                <div class="post-tag"><a href=""><a href="">laoreet</a> </div>
-                <div class="post-tag"><a href="">vitae </a></div>
-                <div class="post-tag"><a href="">venenatis </a></div>
-                <div class="post-tag"><a href=""><a href="">vitae</a></div>
-                <div class="post-tag"><a href=""><a href="">pretium</a> </div>
-                <div class="post-tag"><a href="">tellus </a></div>
-                <div class="post-tag"><a href="">congue </a></div>
-                <div class="post-tag"><a href="">vel</a></div>
-              </div>
-              <div class="indi-post-title">Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              </div>
-              <div class="row ">
-                <div class="date col s3 offset-s9">
-                  July 12,2017
-                </div>
+  </div>
+
+  </header>
+  <div class="container">
+     <div class="post-category">
+      <div class="row">
+       <a href="">laoreet</a> 
+                  <a href="">vitae</a> 
+                  <a href="">venenatis</a> 
+             <a href="">vitae</a>
                 
-              </div>
-              
-             
-             
-              <div class="post-content">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+    </div>
+    </div>
+   
+<div class="post-content">  
+    <h4>    
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+             </h4>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+          Lorem ipsum  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
-			   
-			   
-			   <img src="{{ route('image.show',['image1.jpg']) }}">
+         
+         
+         <img src="{{ route('image.show',['image1.jpg']) }}">
                <br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                <pre><code class="language-css">body {
   font: 100% Helvetica, sans-serif;
   color: #333;
@@ -127,11 +117,11 @@
 }</code></pre>
                 
                 <br/>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
-			    <img   src="{{ route('image.show',['image2.jpg']) }}">
+          <img   src="{{ route('image.show',['image2.jpg']) }}">
                </br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
               
@@ -140,9 +130,9 @@
                 <br/>
                 <img   src="{{ route('image.show',['image3.jpg']) }}">
                 <br/>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
-               </br>
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+               
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
                <pre><code class="language-php">
   public function up()
@@ -157,114 +147,199 @@
         });
     }
 }</code></pre>
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
                </br>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
-               <img   src="{{ route('image.show',['image1.jpg']) }}">
+               <img   src="{{ route('image.show',['image3.jpg']) }}">
                <br/>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/>
-                </div> 
-              
-             <div class="post-actions-indi">
-              <div class="post-share-link-space">
-                <div class="post-share-link-icon"></div>
-              </div>
-              <div class="post-rating-space">
-                <div class="post-rating-icon" ></div>
-
-              </div>
-            </div>
-
-              <!-- <div class="post-comments-area">
-                <div class="comment-heading">Comments</div>
-                <div class="comments-area">
-                  <div class="comment">
-                    <div class="comment-dp">
-                      <img class="comment-dp-thumbnail" src="images/image9.jpg"></div>
-                    <div class="comment-info">
-                      <div class="comment-author-time">
-                        <div class="comment-author-name">vitae venenatis</div>
-                        <div class="comment-time">26th july,4:45pm</div>
-                      </div>
-                      <div class="comment-content">
-                        laoreet vitae venenatis vitae, molestie eu turpis. Ut sollicitudin lacus nisi, sit amet pretium tellus congue vel. Morbi at efficitur purus. Duis ac lacinia purus.
-                      </div>
-                      <div class="comment-action">
-                        <div class="comment-reply">Reply</div></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="give-comments-area">
-                  <div class="give-comments-heading">Give Your Thoughts</div>
-                  <div class="give-comments-textbox">
-                    <textarea class="get-comment-textbox"></textarea>
-                  </div>
-                  <div class="give-comments-button">Comment </div>
-                </div>
-              </div> -->
-            
-          </div>
-            
-           
-           
-            
-          
-           
-          
-         
-          </div>
-
-          
-        </div>
-		
-         
-         </div>
+                
+  </div>
+   <div class="post-meta">
+      <div class="row">
+      <div class="col l6 s6 m6 left-align">
+        By- &nbsp;Himanshu Uppal
+      </div>
+      <div class="col l6 s6 m6 right-align">
+        NOVEMBER 16,2017
       </div>
     </div>
-    
-    
+    </div>
+    <div class="post-share">
+      <div class="row">
+           <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>
 
-    
-	
-   <footer class="page-footer  grey darken-2">
+        
+
+          <a target="_blank" href="">
+            <i class="fa fa-facebook-square fa-2x " style="color:#3b5999"  aria-hidden="true"> </i>
+          </a>
+        
+
+
+         
+
+          <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>
+        
+
+          <a target="_blank" href=""><i class="fa fa-twitter fa-2x " style="color:#55acee" aria-hidden="true"> </i></a>
+      
+
+          <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>
+       
+
+
+      </div>
+    </div>
+  <div class="author-intro">
+    <div class="row">
+      <div class="col s12 m3 l4 center">
+        <img class="circle responsive-img" src="{{ route('image.show',['image1.jpg']) }}" />
+      </div>
+      <div class="col s12 m9 l8">
+        I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+      </div>
+    </div>
+
+  </div>
+  <div class="recommended-posts">
+    <div class="row">
+      <center><h4>Recommended Posts</h4></center>
+    </div>
+    <div class="row">      
+      <div class="col l4 s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ route('image.show',['image2.jpg']) }}">
+                  
+        </div>
+        <div class="card-content grey lighten-5">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+       </div>
+
+        <div class="col l4 s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ route('image.show',['image3.jpg']) }}">
+                  
+        </div>
+        <div class="card-content grey lighten-5">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+       </div>
+
+        <div class="col l4 s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ route('image.show',['image6.jpg']) }}">
+                  
+        </div>
+        <div class="card-content grey lighten-5">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+       </div>
+  </div>
+    </div>
+
+    <div class="popular-posts">
+    <div class="row">
+      <center><h4>Popular Posts</h4></center>
+    </div>
+    <div class="row">      
+      <div class="col l4 s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ route('image.show',['image6.jpg']) }}">
+                  
+        </div>
+        <div class="card-content grey lighten-5">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+       </div>
+
+        <div class="col l4 s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ route('image.show',['image1.jpg']) }}">
+                  
+        </div>
+        <div class="card-content grey lighten-5">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+       </div>
+
+        <div class="col l4 s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ route('image.show',['image3.jpg']) }}">
+                  
+        </div>
+        <div class="card-content grey lighten-5">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+       </div>
+  </div>
+    </div>
+  
+  
+  
+  </div><!-- container  -->
+  
+  <footer class="page-footer green lighten-5">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">About lifeinsidebraces</h5>
-                <p class="grey-text text-lighten-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <h5 class="black-text">About lifeinsidebraces</h5>
+                <p class="black-text "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+              <div class="col l4 offset-l2 s12 ">
+                <h5 class="black-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Our Team</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                  <li><a class="black-text " href="#!">About Us</a></li>
+                  <li><a class="black-text " href="#!">Our Team</a></li>
+                  <li><a class="black-text " href="#!">Blog</a></li>
+                  <li><a class="black-text " href="#!">Contact Us</a></li>
                 </ul>
               </div>
             </div>
             <div class="row">
                <div class="footer-tab">
           <div class="footer-share-menu">
+
+             <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>&nbsp;&nbsp;
+
         
 
           <a target="_blank" href="">
-            <i class="fa fa-facebook-square " style="color:#fff"  aria-hidden="true"> </i>
+            <i class="fa fa-facebook-square fa-2x " style="color:#3b5999"  aria-hidden="true"> </i>
           </a>&nbsp;
         
 
-          <a target="_blank" href=""><i class="fa fa-twitter " style="color:#fff" aria-hidden="true"> </i></a>&nbsp;
-      
 
-          <a target="_blank" href=""><i class="fa fa-instagram" style="color:#fff" ></i></a>&nbsp;&nbsp;
+         
 
-
-          <a target="_blank" href=""><i class="fa fa-google-plus " style="color:#fff" aria-hidden="true"> </i></a>&nbsp;
+          <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>&nbsp;
         
 
-          <a target="_blank" href=""><i class="fa fa-youtube " style="color:#fff" aria-hidden="true"> </i></a>&nbsp;
+          <a target="_blank" href=""><i class="fa fa-twitter fa-2x " style="color:#55acee" aria-hidden="true"> </i></a>&nbsp;
+      
+
+          <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>&nbsp;
        
 
          
@@ -276,25 +351,28 @@
           
           
         </div>
-        <hr style="color:#fff">
+        <hr style="color:#64dd17">
             </div>
           </div>
           <div class="footer-copyright">
-            <div class="container">
-            © 2017 Copyright Text
+            <div class="container white-text">
+            © 2017 Copyright lifeinsidebraces
            
             </div>
           </div>
         </footer>
-    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
    
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+ 
 
-  <script src="js/prism.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/slider-demo.js"></script>
+    {!! Html::script('js/frontend/prism.js') !!}
+     {!! Html::script('js/frontend/javascript.js') !!}
+      {!! Html::script('js/frontend/materialize.min.js') !!}
+
+
+  
 
   
     

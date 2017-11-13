@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
 
 	public function getIndex(){
-		return view('blog.template');
+		return view('blog.template-home');
 
 	}
 
