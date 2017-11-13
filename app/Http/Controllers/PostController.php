@@ -8,6 +8,7 @@ use App\Category;
 use Session;
 use Input;
 use Gate;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -56,8 +57,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        
         $this->authorize('create', Post::class);
-         if(Gate::allows('create-post', Post::class)){
+        
         $this->validate($request,[
             'title'=>'required|max:255',
             'slug'=>'required|alpha_dash|min:5|max:255|unique:posts,slug',
@@ -65,30 +67,33 @@ class PostController extends Controller
             ]);
 
         $post = new Post();
+        $post->admin_id = Auth::user()->id;
 
         $post->title=$request->title;
         $post->slug = $request->slug;
         $post->content=$request->body;
         $post->excerpt="excerpt";
+         $post->tags="tags";
+         $post->published_at = date('Y-m-d H:i:s');
 
         $category=$request->input('category');
        
        
-    foreach($category as $c){
-            printf($c);
+    // foreach($category as $c){
+    //         printf($c);
 
-        }
+    //     }
 
         
 
 
-        //$post->save();
+        $post->save();
 
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');
 
         return redirect()->route('posts.show',$post->id);
-    }
+    
     }
 
     /**
