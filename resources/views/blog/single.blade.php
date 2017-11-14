@@ -2,12 +2,11 @@
 
 @section('title', "| $post->title")
 @section('page-header-tag')
-<header class="header full-height" style="background: #aeea00 url('{{ route('image.show',[$post->featured_image]) }}')">
+<header class="header full-height" style="background:  url('{{ route('image.show',[$post->featured_image]) }}')">
    
     @endsection
 
 
-@section('page-header-image',$post->featured_image)
 
    
 

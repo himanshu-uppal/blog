@@ -10,7 +10,7 @@ body{
 	background-size: cover !important;
   background-repeat: no-repeat;
   overflow: hidden;
-  background-color: #aeea00;
+  background-color: #fff;
   z-index: 999;
 }
 .header .page-header-content{

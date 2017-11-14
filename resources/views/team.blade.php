@@ -2,7 +2,9 @@
 
 @section('title', 'Team')
 
-@section('page-header-image',"image7.jpg")
+  @section('page-header-tag')
+<header class="header full-height" style="background: url('{{ route('image.show',['image8.jpg']) }}')">
+@endsection
 
    
 
