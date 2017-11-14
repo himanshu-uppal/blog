@@ -23,7 +23,7 @@
   </nav>
   <div class="page-header-content  center ">
     <div class="row">
-      <div class="col s12 m10 offset-m1 l8  ">
+      <div class="col s12 m10 offset-m1 l8 offset-l2 ">
 
         <div class="page-header-title white-text">
           @section('page-header-title')
