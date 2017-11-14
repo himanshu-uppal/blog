@@ -73,8 +73,9 @@ class PostController extends Controller
         $post->slug = $request->slug;
         $post->content=$request->body;
         $post->excerpt="excerpt";
-         $post->tags="tags";
-         $post->published_at = date('Y-m-d H:i:s');
+        $post->tags="tags";
+        $post->featured_image="image3.jpg";
+        $post->published_at = date('Y-m-d H:i:s');
 
         $category=$request->input('category');
        
@@ -161,7 +162,15 @@ return view('admin.posts.edit')->withPost($post);
        $this->authorize('update', $post);
 
         $post->title=$request->title;
+        $post->slug = $request->slug;
+       
+
+        $post->title=$request->title;
         $post->content=$request->content;
+         $post->excerpt="excerpt";
+        $post->tags="tags";
+        $post->featured_image="image3.jpg";
+        $post->published_at = date('Y-m-d H:i:s');
         
 
         $post->save();

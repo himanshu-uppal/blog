@@ -73,7 +73,7 @@
           </div>
         </li>
 
-
+        
           
        <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Authorization</a>
           <div class="collapsible-body">
