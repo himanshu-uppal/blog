@@ -28,9 +28,9 @@
 	<h1>{{ $post->title }} </h1>
   <div class="post-category">
       <div class="row">
-       <a href="">laoreet</a> &nbsp;
-                  <a href="">vitae</a> &nbsp;
-                  <a href="">venenatis</a> &nbsp;
+       <a href="">laoreet</a> 
+                  <a href="">vitae</a> 
+                  <a href="">venenatis</a> 
              <a href="">vitae</a>
                 
     </div>
@@ -51,25 +51,25 @@
     </div>
     <div class="post-share">
       <div class="row center">
-           <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>&nbsp;
+           <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>
 
         
 
           <a target="_blank" href="">
             <i class="fa fa-facebook-square fa-2x " style="color:#3b5999"  aria-hidden="true"> </i>
-          </a>&nbsp;
+          </a>
         
 
 
          
 
-          <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>&nbsp;
+          <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>
         
 
-          <a target="_blank" href=""><i class="fa fa-twitter fa-2x " style="color:#55acee" aria-hidden="true"> </i></a>&nbsp;
+          <a target="_blank" href=""><i class="fa fa-twitter fa-2x " style="color:#55acee" aria-hidden="true"> </i></a>
       
 
-          <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>&nbsp;
+          <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>
        
 
 
