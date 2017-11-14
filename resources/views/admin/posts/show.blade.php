@@ -23,7 +23,7 @@
 	 @endforeach
 	</p>
 	<p>{{ $post->excerpt }}</p>
-	<p>{{ $post->content }}</p>
+	<p>{!! $post->content !!}</p>
 	
 
 	
