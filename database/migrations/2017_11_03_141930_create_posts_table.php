@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->integer('admin_id')->unsigned();
             $table->longText('content');
             $table->string('title');
+            $table->string('featured_image');
             $table->text('excerpt');
             $table->text('tags');
             $table->integer('comment_count')->unsigned()->default(0);

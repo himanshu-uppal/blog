@@ -1,13 +1,13 @@
 @extends('master')
 
-@section('title', 'About')
+@section('title', 'Team')
 
 @section('page-header-image',"image7.jpg")
 
    
 
 @section('page-header-title')
-<h1>About</h1>
+<h1>Our Team</h1>
 @endsection 
     
 @section('page-header-meta')
@@ -17,6 +17,6 @@
 
 @section('main')
 
-<h1>About Page</h1>
+<h1>Team</h1>
 
 @endsection

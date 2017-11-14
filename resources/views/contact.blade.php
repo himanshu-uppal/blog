@@ -6,6 +6,19 @@
 
 {!! Html::style('css/parsley.css') !!}
 @endsection
+
+@section('page-header-image',"image7.jpg")
+
+   
+
+@section('page-header-title')
+<h1>Contact</h1>
+@endsection 
+    
+@section('page-header-meta')
+<h4>
+</h4>
+@endsection 
 @section('main')
 
 <h1>Contact page</h1>

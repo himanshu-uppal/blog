@@ -17,6 +17,17 @@ body{
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 }
+header a:hover,
+header a:focus,
+header a:active{
+  color:  #000 !important;
+  text-decoration: none !important;
+}
+header a:visited{
+  color: #000;
+  text-decoration: none !important;
+
+}
 
 .nav ul a:hover {
     background-color: rgba(0,0,0,0.03);
@@ -30,6 +41,7 @@ font-size: -webkit-xxx-large;
   margin-right: 5%;
 }
 .page-header-title{
+  text-align: center;
 	
 }
 h1,h2,h3,h4,h5,h6{
@@ -87,6 +99,18 @@ footer{
   color:  #000 !important;
   text-decoration: none !important;
 }
+
+.posts a:hover,
+ .posts a:focus,
+ .posts a:active{
+  color:  #000 !important;
+  text-decoration: none !important;
+}
+ .posts a:visited{
+  color: #000;
+  text-decoration: none !important;
+
+}
   
 
 
@@ -104,15 +128,16 @@ footer{
 }
 .post-category a{
                    
-    background-color: #bbdefb;
-    padding: 1%;
+    background-color: #bbdefb63;
+    padding: 0.5%;
     border-radius: 20%;
               }
+
 .post-category{
-  word-spacing: 10px;
-  padding-top: 1%;
+  word-spacing: 10px !important;
+  padding-top: 0.5%;
   font-size: large;
-  margin-top: 3%;
+  margin-top: 1%;
 
               }
 
@@ -192,6 +217,43 @@ footer{
 .popular-posts{
   padding: 2%;
 }
+
+.recommended-posts span,p{
+   
+  color:  #000 !important;
+  text-decoration: none !important;
+}
+
+.recommended-posts a:hover,
+.recommended-posts a:focus,
+ .recommended-posts a:active{
+  color:  #000 !important;
+  text-decoration: none !important;
+}
+.recommended-posts a:visited{
+  color: #000;
+  text-decoration: none !important;
+
+}
+
+.popular-posts span,p{
+   
+  color:  #000 !important;
+  text-decoration: none !important;
+}
+
+.popular-posts a:hover,
+.popular-posts a:focus,
+.popular-posts a:active{
+  color:  #000 !important;
+  text-decoration: none !important;
+}
+.popular-posts a:visited{
+  color: #000;
+  text-decoration: none !important;
+
+}
+
 
 
 

@@ -8,12 +8,17 @@ class PagesController extends Controller
 {
 
 	public function getIndex(){
-		return view('blog.template-home');
+		return redirect()->route('blog.index');
 
 	}
 
 	public function getAbout(){
 		return view('about');
+		
+	}
+
+	public function getTeam(){
+		return view('team');
 		
 	}
 

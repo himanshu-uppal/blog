@@ -28,9 +28,10 @@ Route::group(['middleware'=>['web']],function(){
 	Route::get('blog','BlogController@getIndex')->name('blog.index');
 
 	//Pages
-	Route::get('/', 'PagesController@getIndex');
-	Route::get('about', 'PagesController@getContactAbout');
-	Route::get('contact', 'PagesController@getContact');
+	Route::get('/', 'PagesController@getIndex')->name('index');
+	Route::get('about', 'PagesController@getAbout')->name('about');
+	Route::get('team', 'PagesController@getTeam')->name('team');
+	Route::get('contact', 'PagesController@getContact')->name('contact');
 	Route::post('contact', 'PagesController@postContact')->name('contact.post');
 
 	//Post
@@ -51,7 +52,7 @@ Route::group(['middleware'=>['web']],function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
 Route::prefix('admin')->group(function() {
