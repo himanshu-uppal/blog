@@ -15,6 +15,7 @@ class AdminController extends Controller
     public function index()
     {
         $admins = Admin::all();
+        $this->authorize('view', new Admin()); 
         
         
         return view('admin.super.admins.index')->withAdmins($admins);
@@ -27,7 +28,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+         $this->authorize('create', Admin::class); 
     }
 
     /**
@@ -38,7 +39,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->authorize('create', Admin::class); 
     }
 
     /**
@@ -49,7 +50,9 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $admin = Admin::find($id);
+        $this->authorize('view', $admin);        
+        return view('admin.admins.view')->withAdmin($admin);
     }
 
     /**
@@ -60,7 +63,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+         $admin = Admin::find($id);
+        $this->authorize('update', $admin);
     }
 
     /**
@@ -72,7 +76,8 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $admin = Admin::find($id);
+        $this->authorize('update', $admin);
     }
 
     /**
@@ -83,6 +88,7 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $admin = Admin::find($id);
+        $this->authorize('delete', $admin);
     }
 }

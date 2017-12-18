@@ -7,6 +7,7 @@
       <a href="{{ route('index') }}" class="brand-logo  light-green-text text-accent-3">lifeinsidebraces</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="grey-text material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down ">
+        <li><a class="grey-text text-darken-1" href="{{ route('index') }}">Home</a></li>
         <li><a class="grey-text text-darken-1" href="{{ route('about') }}">About Us</a></li>
         <li><a class="grey-text text-darken-1" href="{{ route('blog.index') }} ">Blog</a></li>
         <li><a class="grey-text text-darken-1" href="{{ route('team') }}">Our Team</a></li>
@@ -14,6 +15,7 @@
         
       </ul>
       <ul class="side-nav" id="mobile-demo">
+        <li><a href="{{ route('index') }}">Home</a></li>
         <li><a href="{{ route('about') }}">About Us</a></li>
         <li><a href="{{ route('blog.index') }}">Blog</a></li>
         <li><a href="{{ route('team') }}">Our Team</a></li>

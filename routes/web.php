@@ -42,8 +42,16 @@ Route::group(['middleware'=>['web']],function(){
 
 	//Media
 	Route::resource('media','MediaController');
+	Route::post('media/delete','MediaController@delete')->name('media.delete');
+	
 
 });
+
+// Route::get('/twitter-share', 'ShareController@twitterShareWebsite')->name('twitter.share.website');
+// Route::get('/facebook-share', 'ShareController@facebookShareWebsite')->name('facebook.share.website');
+// Route::get('/pinterest-share', 'ShareController@pinterestShareWebsite')->name('pinterest.share.website');
+
+
 
 
 

@@ -10,9 +10,9 @@ class Role extends Model
    	return $this->belongsToMany('App\Permission');
    }
 
-   public function admins()
+   public function admin()
     {
-        return $this->belongsToMany(Admin::class);
+        return $this->hasOne('App\Admin');
     }
 
     public function hasAccess(array $permissions) : bool

@@ -1,0 +1,4 @@
+To add images in post
+1. upload the image to library .
+2. click image option in editor window and write the following link in the url 
+http://104.236.115.14/image/IMAGE_NAME

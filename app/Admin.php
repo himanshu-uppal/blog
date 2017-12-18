@@ -32,33 +32,36 @@ class Admin extends Authenticatable
     public function comments(){
         return $this->morphMany('App\Comment','author');
     }
+    public function role()
+    {
+        return $this->belongsTo('App\Role');
+    }
     public function posts(){
         return $this->hasMany('App\Post');
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class);
-    }
+    
 
     /**
      * Checks if User has access to $permissions.
      */
     public function hasAccess(array $permissions) : bool
     {
+        //dd($this->role);
+        //$role = $this->role;
         $permissionIds = array();
         foreach($permissions as $permission){
             $permission_id = Permission::where('name',$permission)->select('id')->first();
             $permissionIds[]=$permission_id;
 
         }
-        //dd($permissionIds);
+        //dd($role->role);
         // check if the permission is available in any role
-        foreach ($this->roles as $role) {
-            if($role->hasAccess($permissionIds)) {
-                return true;
-            }
-        }
+        
+             if($this->role->hasAccess($permissionIds)) {
+                 return true;
+             }
+        
         return false;
     }
 
@@ -67,7 +70,7 @@ class Admin extends Authenticatable
      */
     public function inRole(string $role)
     {
-        return $this->roles()->where('name', $role)->count() == 1;
+        return $this->role == $role;
     }
 
      /**
@@ -76,8 +79,8 @@ class Admin extends Authenticatable
      public function permissions() 
     {
         $permissions = array();
-        $roles = $this->roles;
-        foreach($roles as $role){
+        $role = $this->role;
+        
             foreach($role->permissions as $permission){
                  if (!in_array($permission->id, $permissions))
                     {
@@ -85,9 +88,21 @@ class Admin extends Authenticatable
                     }
                 }      
 
-        }
+        
         return $permissions;        
     }
+
+    public function isSuperAdmin(){
+        return $this->role->role == "super-admin";
+    }
+
+    public function isAdmin(){
+        return $this->role->role == "admin";
+    }
+
+
+
+
 
 
     

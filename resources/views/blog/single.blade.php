@@ -28,10 +28,10 @@
 	<h1>{{ $post->title }} </h1>
   <div class="post-category">
       <div class="row">
-       <a href="">laoreet</a> 
-                  <a href="">vitae</a> 
+      <a href="">lifeinsidebraces</a> 
+                  <!-- <a href="">vitae</a> 
                   <a href="">venenatis</a> 
-             <a href="">vitae</a>
+             <a href="">vitae</a> --> 
                 
     </div>
     </div>
@@ -39,7 +39,20 @@
 <div class="post-content">  
    {!! $post->content !!}   
   </div>
-   <div class="post-meta">
+  
+    <!-- <div class="post-share">
+      <div class="row center">
+           <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>
+ <a target="_blank" href="">
+            <i class="fa fa-facebook-square fa-2x " style="color:#3b5999"  aria-hidden="true"> </i>
+          </a>
+           <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>
+         <a target="_blank" href=""><i class="fa fa-twitter fa-2x " style="color:#55acee" aria-hidden="true"> </i></a>
+      <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>
+       
+      </div>
+    </div> -->
+     <div class="post-meta">
       <div class="row">
       <div class="col l6 s6 m6 left-align">
         By- &nbsp;{{ $post->admin->name }}
@@ -49,43 +62,19 @@
       </div>
     </div>
     </div>
-    <div class="post-share">
-      <div class="row center">
-           <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>
-
-        
-
-          <a target="_blank" href="">
-            <i class="fa fa-facebook-square fa-2x " style="color:#3b5999"  aria-hidden="true"> </i>
-          </a>
-        
-
-
-         
-
-          <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>
-        
-
-          <a target="_blank" href=""><i class="fa fa-twitter fa-2x " style="color:#55acee" aria-hidden="true"> </i></a>
-      
-
-          <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>
-       
-
-
-      </div>
-    </div>
+    <hr>
   <div class="author-intro">
     <div class="row">
       <div class="col s12 m3 l4 center">
         <img class="circle responsive-img" src="{{ route('image.show',['image1.jpg']) }}" />
       </div>
       <div class="col s12 m9 l8">
-        I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
-      </div>
+        <!-- {{ $post->admin->description }} -->
+        </div>
     </div>
 
   </div>
+  <hr>
   <div class="recommended-posts">
     <div class="row">
       <center><h4>Recommended Posts</h4></center>
@@ -100,7 +89,7 @@
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title">{{ $recommendedPost->title }}</span>
-          <p>{{ substr($recommendedPost->excerpt,0,60) }} </p>
+          <p>{{ substr($recommendedPost->excerpt,0,100) }} </p>
         </div>
       </div>
     </a>
@@ -127,7 +116,7 @@
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title">{{ $popularPost->title }}</span>
-          <p>{{ substr($popularPost->excerpt,0,60) }} </p>
+          <p>{{ substr($popularPost->excerpt,0,100) }} </p>
         </div>
       </div>
     </a>

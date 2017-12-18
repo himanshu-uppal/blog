@@ -40,6 +40,53 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="input-field col s10">
+				{{ Form::label('excerpt','Excerpt:')}}
+				{{ Form::textarea('excerpt',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s10">
+				{{ Form::label('tags','Post Hash tags:')}}
+				{{ Form::textarea('tags',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				{{ Form::label('featured_image','Featured Image')}}
+				{{ Form::text('featured_image',null,array('class'=>'validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
+		<!-- <div class="row">
+		
+			<div class="input-field col s10">
+				{!! Form::label('status','Post Status:') !!}</br></br>				
+				
+				
+			
+	
+
+	
+			</div>
+		</div>
+	 -->
+
+				
+		
+		
+		<!-- <div class="row">
+			<div class="input-field col s8">
+			 {{ Form::label('category',' Post Category:')}} 
+		
+			
+
+		
+				
+    				
+    		
+			</div>	
+		</div> -->	
+		<div class="row">
 			<div class="input-field col s6">
 				<a href="{{ route('posts.show',$post->id) }}" class="btn red lighten-1 waves-effect waves-light">Cancel</a>
 	

@@ -18,15 +18,19 @@ class CreatePostsTable extends Migration
             $table->integer('admin_id')->unsigned();
             $table->longText('content');
             $table->string('title');
+            $table->string('slug')->unique();
             $table->string('featured_image');
             $table->text('excerpt');
             $table->text('tags');
-            $table->integer('comment_count')->unsigned()->default(0);
-            $table->dateTime('published_at');
+            $table->integer('comment_count')->unsigned()->default(0);          
             $table->bigInteger('post_id')->unsigned()->nullable('true'); //post_parent            
-            $table->integer('status')->unsigned()->default(1);
-            $table->integer('type')->unsigned()->default(1);          
+           $table->integer('status')->unsigned()->default(1);
+            $table->integer('type')->unsigned()->default(1);
+            $table->dateTime('published_at');
+            $table->softDeletes();          
             $table->timestamps();
+           
+
             
             $table->foreign('admin_id')->references('id')->on('admins');
             $table->foreign('post_id')->references('id')->on('posts');

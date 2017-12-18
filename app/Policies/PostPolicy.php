@@ -48,7 +48,7 @@ class PostPolicy
     public function update(Admin $admin, Post $post)
     {
 
-        if($admin->roles->first()->role == 'editor'){
+        if($admin->role == 'editor'){
              return $admin->hasAccess(['update-post']) and $admin->id == $post->admin_id;
         }
         else{

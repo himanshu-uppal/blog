@@ -23,6 +23,7 @@
         @yield('custom-styles')      
     </head>
     <body>  
+       
     @include('partials._header') 
     @include('partials._messages')  
     @section('main')

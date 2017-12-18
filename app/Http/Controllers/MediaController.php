@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use File;
 
 
 class MediaController extends Controller
@@ -97,6 +97,19 @@ class MediaController extends Controller
         //
     }
 
+    public function delete(Request $request)
+    {
+        if(Auth::user()->idSuperAdmin() || Auth::user()->idAdmin()  ){
+             $filename = $request->name;
+        $path = storage_path() . '/uploads/images/' . $filename;
+        File::delete($path);
+
+        return redirect()->route('media.index');
+
+        }
+       
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -105,7 +118,6 @@ class MediaController extends Controller
      */
     public function destroy($filename)
     {
-        $path = storage_path() . '/uploads/images/' . $filename;
-            File::delete($path);
+        
     }
 }

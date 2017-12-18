@@ -104,91 +104,91 @@ class PermissionsTableSeeder extends Seeder
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //15
+        //14
         $permission = new Permission();
         $permission->name ="create-role";
         $permission->display_name = "create-role";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //16
+        //15
         $permission = new Permission();
         $permission->name ="update-role";
         $permission->display_name = "update-role";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //17
+        //16
         $permission = new Permission();
         $permission->name ="delete-role";
         $permission->display_name = "delete-role";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //18
+        //17
         $permission = new Permission();
         $permission->name ="view-permission";
         $permission->display_name = "View Permission";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //19
+        //18
         $permission = new Permission();
         $permission->name ="create-permission";
         $permission->display_name = "create-permission";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //20
+        //19
         $permission = new Permission();
         $permission->name ="update-permission";
         $permission->display_name = "update-permission";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //21
+        //20
         $permission = new Permission();
         $permission->name ="delete-permission";
         $permission->display_name = "delete-permission";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //22
+        //21
         $permission = new Permission();
         $permission->name ="view-admin";
         $permission->display_name = "View Admin";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //23
+        //22
         $permission = new Permission();
         $permission->name ="create-admin";
         $permission->display_name = "create-admin";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //24
+        //23
         $permission = new Permission();
         $permission->name ="update-admin";
         $permission->display_name = "update-admin";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //25
+        //24
         $permission = new Permission();
         $permission->name ="delete-admin";
         $permission->display_name = "delete-admin";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-          //26
+          //25
         $permission = new Permission();
         $permission->name ="draft-post";
         $permission->display_name = "Draft post";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-         //27
+         //26
         $permission = new Permission();
         $permission->name ="publish-post";
         $permission->display_name = "Publish post";
@@ -196,19 +196,25 @@ class PermissionsTableSeeder extends Seeder
         $permission->save();
 
 
-         //28
+         //27
         $permission = new Permission();
         $permission->name ="perm-delete-post";
         $permission->display_name = "Permanent delete post";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
 
-        //29
+        //28
         $permission = new Permission();
         $permission->name ="restore-post";
         $permission->display_name = "Restore post";
         $permission->description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
         $permission->save();
+
+
+        
+
+
+
 
         
     }

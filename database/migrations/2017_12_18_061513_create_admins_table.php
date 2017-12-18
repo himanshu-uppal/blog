@@ -16,12 +16,17 @@ class CreateAdminsTable extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email',60)->unique();
-            $table->string('job_title');
+            $table->string('email',60)->unique();   
+            $table->integer('role_id')->unsigned();         
             $table->string('password');
+            $table->text('description');
             $table->rememberToken();
             $table->timestamps();
-        });
+
+            
+           $table->foreign('role_id')->references('id')->on('roles');
+
+            });
     }
 
     /**
@@ -31,6 +36,9 @@ class CreateAdminsTable extends Migration
      */
     public function down()
     {
+
+    
+        
         Schema::dropIfExists('admins');
     }
 }

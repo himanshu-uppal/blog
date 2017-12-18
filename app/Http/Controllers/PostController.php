@@ -41,8 +41,9 @@ class PostController extends Controller
       
     
          $categories = Category::all(['category','id']);
+         $categoriesSelected = [1,2]; //should not be here
        // $status = Status::all(['status','id']);        
-        return view('admin.posts.create')->withCategories($categories);
+        return view('admin.posts.create')->withCategories($categories)->withCategoriesSelected($categoriesSelected);
 
     
         
@@ -68,15 +69,13 @@ class PostController extends Controller
 
         $post = new Post();
         $post->admin_id = Auth::user()->id;
-
         $post->title=$request->title;
         $post->slug = $request->slug;
         $post->content=$request->body;
-        $post->excerpt="excerpt";
-        $post->tags="tags";
-        $post->featured_image="image3.jpg";
+        $post->excerpt=$request->excerpt;
+        $post->tags=$request->tags;
+        $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
-
         $category=$request->input('category');
        
        
@@ -108,10 +107,7 @@ class PostController extends Controller
         $post = Post::find($id);
         $this->authorize('view', $post);
         $comments = $post->comments;
-        $categories= $post->categories;
-
-
-        
+        $categories= $post->categories;       
         return view('admin.posts.show')->withPost($post)->withComments($comments)->withCategories($categories);
     }
 

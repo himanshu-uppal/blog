@@ -45,9 +45,19 @@
 			<a href="{{route('media.create')}}" class="btn blue">Add New Media </a>
 		</div>		
 	</div>
-
-       <!--  <div id="lightgallery" class="demo-gallery"> -->
-        	
+  
+  {!! Form::open(['route'=>['media.delete'],'method'=>'POST']) !!}
+  
+    <div class="row">
+      <div class="input-field col s6">
+        {{ Form::label('name','Image Name')}}
+        {{ Form::text('name',null,array('class'=>'validate','data-parsley-required'=>'')) }}
+         {{ Form::submit('Delete Image',array('class'=>'btn green lighten-1 waves-effect waves-light'))}}
+        {!! Form::close() !!}
+      </div>
+    </div>
+  </br></br>
+    
 
 
 	

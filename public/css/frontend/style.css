@@ -1,6 +1,11 @@
+
 body{
 	font-family: 'Exo 2', sans-serif;
 
+}
+body img{
+  
+pointer-events: none;
 }
 .full-height{
     height:100vh;
@@ -175,7 +180,7 @@ footer{
 }
 
 .post-content a{
-  color: #aeea00 !important;
+  color: #8bbb00 !important;
   text-decoration: none !important;
   /*font-weight: bold;*/
 
@@ -184,7 +189,7 @@ footer{
 .post-content a:hover,
 .post-contenta:focus,
 .post-content a:active{
-  color:  #b71c1c !important;
+  color:  #688c00 !important;
   text-decoration: none !important;
 }
 .post-content a:visited{

@@ -73,7 +73,7 @@
           </div>
         </li>
 
-        
+      @if(Auth::user()->isSuperAdmin())
           
        <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Authorization</a>
           <div class="collapsible-body">
@@ -108,9 +108,13 @@
           </div>
         </li>
 
-        <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Comments<span class="new badge red"></span></a>
+        @endif
 
-        </li>
+        <!-- <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Comments<span class="new badge red"></span></a>
+
+        </li> -->
+
+       <!--  @if(Auth::user()->isSuperAdmin() || Auth::user()->isAdmin())
         <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">User</a>
           <div class="collapsible-body">
             <ul>
@@ -121,6 +125,11 @@
             </ul>
           </div>
         </li>
+        @endif -->
+
+
+
+        @if(Auth::user()->isSuperAdmin())
 
         <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Admin</a>
           <div class="collapsible-body">
@@ -133,8 +142,24 @@
           </div>
         </li>
 
+      
 
-        <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Components</a>
+         @else
+
+        <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Admin</a>
+          <div class="collapsible-body">
+            <ul>              
+              <li><a href="#">Your Profile</a></li>
+            </ul>
+          </div>
+        </li>
+
+        @endif
+
+        
+
+
+       <!--  <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Components</a>
           <div class="collapsible-body">
             <ul>
               <li><a href="#">Header</a></li>
@@ -143,7 +168,7 @@
 
             </ul>
           </div>
-        </li>
+        </li> -->
         <li class="bold"><a href="{{ route('admin.logout') }} " class="  waves-effect waves-teal">Logout</a>
        
         </li>
