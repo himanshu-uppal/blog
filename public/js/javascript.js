@@ -6,6 +6,8 @@
     $('.permissions-slug').text(newText);
   });
 
+
+
   // Initialize collapse button
   $(".button-collapse").sideNav();
   $('ul.tabs').tabs({
@@ -14,6 +16,7 @@
   $('ul.tabs').tabs('select_tab', 'tab_id');
 
    $('.modal').modal();
+
 
  
 
@@ -41,6 +44,8 @@
     ampmclickable: true, // make AM PM clickable
     aftershow: function(){} //Function for after opening timepicker
   });
+
+     
 
       
   });

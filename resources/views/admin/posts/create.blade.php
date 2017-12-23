@@ -56,41 +56,31 @@
 			<div class="input-field col s10">
 				{!! Form::label('status','Post Status:') !!}</br></br>				
 				
-				
-			
-	
-
-	
 			</div>
 			</div> -->
 	
+		<div class="row">
+			<div class=" col s8">
 
-				
+    				
+        
+    				
+			 {{ Form::label('category',' Post Category:')}} </br></br>
 		
-		
-		<!-- <div class="row">
-			<div class="input-field col s8">
-			 {{ Form::label('category',' Post Category:')}} 
-		
-			</br></br>
-
 		
 			@foreach($categories as $category)
-			{!! Form::label($category->id,$category->category)  !!}
-										<label>
-											{{ $category->category }}
-											
-				 {!! Form::checkbox('categories[]',  $category->id, ( in_array($category->id, $categoriesSelected) )?true:false) !!} 
-										 </label> 
+
+        	<input type="checkbox" name="categories[]" value="{{$category->id}}" id="{{$category->id}}" /> 
+
+      <label for="{{$category->id}}">{{$category->category}}</label></br>
+
+			
+										
+				
 			@endforeach
 			
-
-
-				
-    				
-    		
 			</div>	
-		</div> -->	
+		</div>	
 		<div class="row">
 			<div class="input-field col s6">
 				{{ Form::submit('Create Post',array('class'=>'btn green lighten-1 waves-effect waves-light'))}}

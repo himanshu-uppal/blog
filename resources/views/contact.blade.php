@@ -26,17 +26,37 @@
 
 {!! Form::open(array('route'=>'contact.post','data-parsley-validate'=>'')) !!}
 
+<div class="row">
+			<div class="input-field col s10">
+
 
 	{{ Form::label('email','Email:')}}
-	{{ Form::text('email',null,array('class'=>'form-control','required'=>'','data-parsley-type'=>'email')) }}
+	{{ Form::text('email',null,array('class'=>'validate','required'=>'','data-parsley-type'=>'email')) }}
+
+</div>
+</div>
+<div class="row">
+			<div class="input-field col s10">
+
 	</br>
 	{{ Form::label('subject','Subject:')}}
-	{{ Form::text('subject',null,array('class'=>'form-control')) }}
-	</br>
+	{{ Form::text('subject',null,array('class'=>' validate')) }}
+	</div>
+</div>
+<div class="row">
+			<div class="input-field col s10">
+	
 	{{ Form::label('message','Message:')}}
-	{{ Form::textarea('message',null,array('class'=>'form-control','required'=>'')) }}
-	</br>
-	{{ Form::submit('Send Message')}}
+	{{ Form::textarea('message',null,array('class'=>'materialize-textarea validate','required'=>'')) }}
+	</div>
+</div>
+<div class="row">
+		<div class="input-field col s10">
+			
+	
+	{{ Form::submit('Send Message',array('class'=>'btn light-green accent-4 waves-effect waves-light'))}}
+</div>
+</div>
 
 {!! Form::close() !!}
 </div>

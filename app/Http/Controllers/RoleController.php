@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Role;
 use App\Permission;
 use Session;
+use Illuminate\Support\Facades\Input;
 
 class RoleController extends Controller
 {
@@ -58,6 +59,20 @@ class RoleController extends Controller
                 'description'=> 'sometimes|max:255'
                 ]);
          $this->authorize('create',Role::class);
+         //$permissions = Input::get('permission');
+         $permissions = $request->permission;
+         $permission_select = $request->permission_select;
+        
+         
+
+       
+          print_r($permission_select);
+         foreach ($permissions as $permission) {
+            print_r($permission);
+         }
+         
+         return ;
+         // serialize(Input::get('permission'));
 
          $role= new Role();
          $role->role = $request->name;

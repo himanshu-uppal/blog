@@ -74,18 +74,27 @@
 				
 		
 		
-		<!-- <div class="row">
-			<div class="input-field col s8">
-			 {{ Form::label('category',' Post Category:')}} 
-		
-			
+		<div class="row">
+			<div class=" col s8">
 
-		
-				
     				
-    		
+        
+    				
+			 {{ Form::label('category',' Post Category:')}} </br></br>
+		
+		
+			@foreach($categories as $category)
+
+        	<input type="checkbox" name="categories[]" value="{{$category->id}}" id="{{$category->id}}" {{ in_array($category->id,$categoriesSelected) ? 'checked' : ''  }} /> 
+
+      <label for="{{$category->id}}">{{$category->category}}</label></br>
+
+												
+				
+			@endforeach
+			
 			</div>	
-		</div> -->	
+		</div>		
 		<div class="row">
 			<div class="input-field col s6">
 				<a href="{{ route('posts.show',$post->id) }}" class="btn red lighten-1 waves-effect waves-light">Cancel</a>

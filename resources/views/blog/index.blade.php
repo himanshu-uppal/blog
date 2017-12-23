@@ -20,18 +20,21 @@
 
 @section('main')
 
-  <div class="container">  
+
+  <div class="container"> 
+  <div class="row"> 
+    <div class="col l8 s12 m6">
   <div class="posts">
     <div class="row">
       <center><h4>Recent Posts</h4></center>
     </div>
 
     
-    <div class="row"> 
+    <div class="row masonry-grid" data-masonry='{ "itemSelector": ".masonry-grid-item" }'> 
     @foreach($posts as $post)     
-      <div class="col l4 s12 m6">
+      <div class="col l6 s12 m6 masonry-grid-item">
         <a href="{{ route('blog.single',$post->slug) }}">
-      <div class="card">
+      <div class="card ">
         <div class="card-image">
           <img src="{{ route('image.show',$post->featured_image) }}">                  
         </div>
@@ -57,11 +60,15 @@
 
   </div>
     </div>
+     </div><!-- col for posts -->
+       @include('partials._sidebar') 
+     
 
   
   
-  
+  </div><!-- row -->
   </div><!-- container  -->
+
   
 
 @endsection

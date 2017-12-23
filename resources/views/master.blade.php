@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        
+
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dosis:700|Titillium+Web:700|Exo+2:400,900" rel="stylesheet">
         <script src="https://use.fontawesome.com/2b18a9f74f.js"></script>
@@ -32,6 +32,7 @@
     {!! Html::script('js/frontend/prism.js') !!}
     {!! Html::script('js/frontend/javascript.js') !!}
     {!! Html::script('js/frontend/materialize.min.js') !!}
+    {!! Html::script('js/frontend/masonry.pkgd.min.js') !!}
     @yield('footer-scripts')
     </body>
     @include('partials._footer') 

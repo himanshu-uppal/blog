@@ -9,6 +9,7 @@ use Session;
 use Input;
 use Gate;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class PostController extends Controller
 {
@@ -41,9 +42,9 @@ class PostController extends Controller
       
     
          $categories = Category::all(['category','id']);
-         $categoriesSelected = [1,2]; //should not be here
+       
        // $status = Status::all(['status','id']);        
-        return view('admin.posts.create')->withCategories($categories)->withCategoriesSelected($categoriesSelected);
+        return view('admin.posts.create')->withCategories($categories);
 
     
         
@@ -76,18 +77,22 @@ class PostController extends Controller
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
-        $category=$request->input('category');
+        $post->save();
+        $category=$request->categories;
        
        
-    // foreach($category as $c){
-    //         printf($c);
+    foreach($category as $c){
+             DB::table('category_post')->insert(
+            ['post_id' => $post->id, 'category_id' => $c]
+        );
 
-    //     }
+        }
+        return ;
 
         
 
 
-        $post->save();
+        
 
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');
@@ -120,10 +125,13 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+       
+         $categories = Category::all(['category','id']);
+         $categoriesSelected = [1,2]; //should not be here
 
           $this->authorize('update', $post);
 
-return view('admin.posts.edit')->withPost($post);
+return view('admin.posts.edit')->withPost($post)->withCategories($categories)->withCategoriesSelected($categoriesSelected);
 
         
     }
@@ -159,17 +167,25 @@ return view('admin.posts.edit')->withPost($post);
 
         $post->title=$request->title;
         $post->slug = $request->slug;
-       
-
-        $post->title=$request->title;
-        $post->content=$request->content;
-         $post->excerpt="excerpt";
-        $post->tags="tags";
-        $post->featured_image="image3.jpg";
+        $post->content=$request->body;
+        $post->excerpt=$request->excerpt;
+        $post->tags=$request->tags;
+        $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
-        
-
         $post->save();
+        $category=$request->categories;
+       
+       
+    foreach($category as $c){
+             DB::table('category_post')->insert(
+            ['post_id' => $post->id, 'category_id' => $c]
+        );
+
+        }
+
+       
+       
+  
 
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');

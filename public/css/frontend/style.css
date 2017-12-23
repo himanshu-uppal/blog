@@ -1,3 +1,42 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Base
+  1.1 Utilities
+  1.2 Objects
+2.0 Layout
+3.0 Components
+4.0 Header
+5.0 Navigation
+6.0 Post item
+  6.1 Post item general
+  6.2 Post item list
+  6.3 Post item list with background
+  6.4 Post item split
+  6.5 Post item classic
+  6.6 Post item card
+  6.7 Post item tile
+7.0 Blocks
+  7.1 Featured slider
+  7.2 Featured carousel
+  7.3 Featured tiles
+8.0 Format
+  8.1 Format audio
+  8.2 Format quote
+  8.3 Format link
+  8.4 Format gallery
+  8.5 Format image
+9.0 Content typography
+  9.1 WordPress class
+  9.2 Content typography
+10.0 Single
+11.0 Pages
+12.0 Widgets
+13.0 Footer
+14.0 Responsive
+15.0 Print
+--------------------------------------------------------------*/
+
 
 body{
 	font-family: 'Exo 2', sans-serif;
@@ -223,6 +262,14 @@ footer{
   padding: 2%;
 }
 
+/* Sidebar */
+#sidebar-elements{
+
+}
+.sidebar-elements{
+  
+}
+
 .recommended-posts span,p{
    
   color:  #000 !important;
@@ -258,8 +305,3 @@ footer{
   text-decoration: none !important;
 
 }
-
-
-
-
-

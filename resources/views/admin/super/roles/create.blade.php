@@ -37,13 +37,34 @@
 				@foreach($permissions as $permission)
     				
         	
-        	<input type="checkbox" name="permission[]" value="{{$permission->id}}" /> 
+        	<input type="checkbox" name="permission[]" value="{{$permission->id}}" id="{{$permission->id}}" /> 
+
       <label for="{{$permission->id}}">{{$permission->display_name}}</label></br>
 
     				@endforeach
 		 
 			</div>
 		</div>
+		<div class="row">
+			<div class=" col s10">
+				{{ Form::label('label','Permissions-Select:')}}</br></br>
+				 <select name="permission_select">
+				 	<option value="" disabled selected>Choose your option</option>
+      
+    
+ 
+				@foreach($permissions as $permission)
+				  <option value="{{$permission->id}}">{{$permission->display_name}}</option>
+     			
+        	
+
+    				@endforeach
+    				   </select>
+		 
+			</div>
+		</div>
+
+		
 		
 		
 		<div class="row">
