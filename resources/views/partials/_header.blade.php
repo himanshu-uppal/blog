@@ -3,15 +3,15 @@
     @show 
 
 <nav>
-    <div class="nav-wrapper white ">
+    <div class="nav-wrapper ">
       <a href="{{ route('index') }}" class="brand-logo  light-green-text text-accent-3">lifeinsidebraces</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="grey-text material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down ">
-        <li><a class="grey-text text-darken-1" href="{{ route('index') }}">Home</a></li>
-        <li><a class="grey-text text-darken-1" href="{{ route('about') }}">About Us</a></li>
-        <li><a class="grey-text text-darken-1" href="{{ route('blog.index') }} ">Blog</a></li>
-        <li><a class="grey-text text-darken-1" href="{{ route('team') }}">Our Team</a></li>
-        <li><a class="grey-text text-darken-1" href="{{ route('contact') }}">Contact Us</a></li>
+        <li><a class=" white-text" href="{{ route('index') }}">Home</a></li>
+        <li><a class=" white-text" href="{{ route('about') }}">About Us</a></li>
+        <li><a class="white-text" href="{{ route('blog.index') }} ">Blog</a></li>
+        <li><a class="white-text" href="{{ route('team') }}">Our Team</a></li>
+        <li><a class=" white-text" href="{{ route('contact') }}">Contact Us</a></li>
         
       </ul>
       <ul class="side-nav" id="mobile-demo">
