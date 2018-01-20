@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->text('tags');
             $table->integer('comment_count')->unsigned()->default(0);          
             $table->bigInteger('post_id')->unsigned()->nullable('true'); //post_parent            
-           $table->integer('status')->unsigned()->default(1);
+            $table->integer('status')->unsigned()->default(1);
             $table->integer('type')->unsigned()->default(1);
             $table->dateTime('published_at');
             $table->softDeletes();          

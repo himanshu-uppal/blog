@@ -16,15 +16,7 @@ class AdminsTableSeeder extends Seeder
         $admin->name="himanshu";
         $admin->email="himanshu94uppal@gmail.com";
         $admin->role_id=1;
-        $admin->password=bcrypt('123456');
-        $admin->description="description";
-        $admin->save();
-
-        $admin= new Admin();
-        $admin->name="kunal";
-        $admin->email="kunal.p.rai11@gmail.com";
-         $admin->role_id=2;
-        $admin->password=bcrypt('123456');
+        $admin->password=bcrypt('123456@#');
         $admin->description="description";
         $admin->save();
 

@@ -13,6 +13,17 @@
 		<h2>Create New Post</h2>
 		{!! Form::open(array('route'=>'posts.store','data-parsley-validate'=>'true','method'=>'POST')) !!}
 		<div class="row">
+			<div class="col s10">
+				{{ Form::label('label','Post Parent:')}}</br></br>
+				 <select name="post_parent">
+				 	<option value="" disabled selected>Choose your option</option>
+				@foreach($posts as $post)
+				  <option value="{{$post->id}}">{{$post->title}}</option>
+    				@endforeach
+    				   </select>
+			</div>
+		</div>
+		<div class="row">
 			<div class="input-field col s6">
 				{{ Form::label('title','Post Title')}}
 				{{ Form::text('title',null,array('class'=>'validate','data-parsley-required'=>'')) }}
@@ -51,13 +62,13 @@
 				{{ Form::text('featured_image',null,array('class'=>'validate','data-parsley-required'=>'')) }}
 			</div>
 		</div>
-		<!-- <div class="row">
+		<!--  <div class="row">
 		
-			<div class="input-field col s10">
-				{!! Form::label('status','Post Status:') !!}</br></br>				
+			<div class="col s10">
+						
 				
 			</div>
-			</div> -->
+			</div>  -->
 	
 		<div class="row">
 			<div class=" col s8">

@@ -42,9 +42,10 @@ class PostController extends Controller
       
     
          $categories = Category::all(['category','id']);
+         $posts = Post::orderBy('id','DESC')->get(['id','title']);
        
        // $status = Status::all(['status','id']);        
-        return view('admin.posts.create')->withCategories($categories);
+        return view('admin.posts.create')->withCategories($categories)->withPosts($posts);
 
     
         
@@ -68,6 +69,12 @@ class PostController extends Controller
             'body' => 'required',
             ]);
 
+        /* to check post parent value is coming or not through select box */
+        /* Check started */
+        $post_parent = $request->post_parent;      
+        // print_r($post_parent);       
+        /* Check ended */
+
         $post = new Post();
         $post->admin_id = Auth::user()->id;
         $post->title=$request->title;
@@ -87,12 +94,6 @@ class PostController extends Controller
         );
 
         }
-        return ;
-
-        
-
-
-        
 
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');
@@ -167,7 +168,7 @@ return view('admin.posts.edit')->withPost($post)->withCategories($categories)->w
 
         $post->title=$request->title;
         $post->slug = $request->slug;
-        $post->content=$request->body;
+        $post->content=$request->content;
         $post->excerpt=$request->excerpt;
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
