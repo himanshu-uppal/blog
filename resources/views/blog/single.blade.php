@@ -1,5 +1,11 @@
 @extends('master')
 
+@section('share-meta')
+<meta property="og:title" content="{{ $post->title }}" />
+<meta property="og:image" content="{{ route('image.show',[$post->featured_image]) }}" />
+<meta property="og:type" content="website" />
+@endsection
+
 @section('title', "| $post->title")
 @section('page-header-tag')
 <header class="header full-height" style="background:  url('{{ route('image.show',[$post->featured_image]) }}')">
