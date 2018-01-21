@@ -46,10 +46,10 @@
    {!! $post->content !!}   
   </div>
   
-    <!-- <div class="post-share">
+     <div class="post-share">
       <div class="row center">
            <a target="_blank" href=""><i class="fa fa-instagram fa-2x" style="color:#e4405f" ></i></a>
- <a target="_blank" href="">
+ <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://45.55.12.180">
             <i class="fa fa-facebook-square fa-2x " style="color:#3b5999"  aria-hidden="true"> </i>
           </a>
            <a target="_blank" href=""><i class="fa fa-google-plus fa-2x" style="color:#dd4b39" aria-hidden="true"> </i></a>
@@ -57,7 +57,7 @@
       <a target="_blank" href=""><i class="fa fa-youtube fa-2x" style="color:#cd201f" aria-hidden="true"> </i></a>
        
       </div>
-    </div> -->
+    </div> 
      <div class="post-meta">
       <div class="row">
       <div class="col l6 s6 m6 left-align">
