@@ -23,7 +23,7 @@
 
   <div class="container"> 
   <div class="row"> 
-    <div class="col l8 s12 m6">
+    <div class="col l12 s12 m12">
   <div class="posts">
     <div class="row">
       <center><h4>Recent Posts</h4></center>
@@ -61,7 +61,7 @@
   </div>
     </div>
      </div><!-- col for posts -->
-       @include('partials._sidebar') 
+       <!-- @include('partials._sidebar')  -->
      
 
   
