@@ -99,7 +99,7 @@ class MediaController extends Controller
 
     public function delete(Request $request)
     {
-        if(Auth::user()->idSuperAdmin() || Auth::user()->idAdmin()  ){
+        if(Auth::user()->isSuperAdmin() || Auth::user()->isAdmin()  ){
              $filename = $request->name;
         $path = storage_path() . '/uploads/images/' . $filename;
         File::delete($path);
