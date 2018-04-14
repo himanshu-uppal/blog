@@ -1,9 +1,11 @@
-
+ 
 @section('page-header-tag')
     @show 
-
+<div class="container">
 <nav>
     <div class="nav-wrapper ">
+       <a href="#" class="brand-logo center">Logo</a>
+{{--
       <a href="{{ route('index') }}" class="brand-logo  light-green-text text-accent-3">lifeinsidebraces</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="grey-text material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down ">
@@ -21,8 +23,11 @@
         <li><a href="{{ route('team') }}">Our Team</a></li>
         <li><a href="{{ route('contact') }}">Contact Us</a></li>
       </ul>
+    --}}
     </div>
   </nav>
+</div> <!-- container ends -->
+<!-- 
   <div class="page-header-content  center ">
     <div class="row">
       <div class="col s12 m10 offset-m1 l8 offset-l2 ">
@@ -34,13 +39,13 @@
       @section('page-header-meta')
     @show
         </div>
-        <!-- <div class="meta">
+         <div class="meta">
           -lorem ipsum is lorem hitvh
-        </div> -->
-        <!-- <div >
+        </div> 
+       <div >
           <img class="page-header-image" src="images/title.png" />
        
-        </div> -->
+        </div> 
 
       
           
@@ -56,5 +61,6 @@
     
 
   </div>
+-->
 
   </header>

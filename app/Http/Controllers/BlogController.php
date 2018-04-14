@@ -11,8 +11,10 @@ class BlogController extends Controller
 
     public function getIndex(){
         $posts= Post::orderBy('id','DESC')->take(6)->get();
+        $recommended_posts = Post::orderBy('id','DESC')->take(3)->get();
+        $popular_posts = Post::orderBy('id','DESC')->take(3)->get();
         
-        return view('blog.index')->withPosts($posts);
+        return view('blog.index')->withPosts($posts)->withRecommendedPosts($recommended_posts)->withPopularPosts($popular_posts);
     }
    public function getSingle($slug){
 

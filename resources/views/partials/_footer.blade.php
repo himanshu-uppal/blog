@@ -5,7 +5,8 @@
                 <h5 class="black-text">About lifeinsidebraces</h5>
                 <p class="black-text "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
               </div>
-              <div class="col l4 offset-l2 s12 ">
+              {{--
+               <div class="col l4 offset-l2 s12 ">
                 <h5 class="black-text">Links</h5>
                 <ul>
                   <li><a class="black-text " href="{{ route('index') }}">Home</a></li>
@@ -15,6 +16,7 @@
                   <li><a class="black-text " href="{{ route('contact') }}">Contact Us</a></li>
                 </ul>
               </div>
+              --}}
             </div>
             <div class="row">
                <div class="footer-tab">

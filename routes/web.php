@@ -29,10 +29,10 @@ Route::group(['middleware'=>['web']],function(){
 
 	//Pages
 	Route::get('/', 'PagesController@getIndex')->name('index');
-	Route::get('about', 'PagesController@getAbout')->name('about');
-	Route::get('team', 'PagesController@getTeam')->name('team');
-	Route::get('contact', 'PagesController@getContact')->name('contact');
-	Route::post('contact', 'PagesController@postContact')->name('contact.post');
+	// Route::get('about', 'PagesController@getAbout')->name('about');
+	// Route::get('team', 'PagesController@getTeam')->name('team');
+	// Route::get('contact', 'PagesController@getContact')->name('contact');
+	// Route::post('contact', 'PagesController@postContact')->name('contact.post');
 
 	//Post
 	Route::resource('posts','PostController');
@@ -81,3 +81,7 @@ Route::get('image/{filename}', ['as' => 'image.show', 'uses' => function($filena
 
     return $response;
 }]);
+
+
+Route::get('login/google', 'Auth\LoginController@redirectToProvider')->name('google.login');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');

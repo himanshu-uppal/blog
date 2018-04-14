@@ -1,29 +1,36 @@
 @extends('master')
 
+
 @section('share-meta')
 <meta property="og:title" content="{{ $post->title }}" />
 <meta property="og:image" content="{{ route('image.show',[$post->featured_image]) }}" />
 <meta property="og:type" content="website" />
 @endsection
 
+
+ 
 @section('title', "| $post->title")
-@section('page-header-tag')
-<header class="header full-height" style="background:  url('{{ route('image.show',[$post->featured_image]) }}')">
+
+
+ {{-- @section('page-header-tag') --}} 
+
+ <!-- <header class="header full-height" style="background:  url('{{ route('image.show',[$post->featured_image]) }}')"> --> 
    
-    @endsection
+ {{-- @endsection --}}
+
 
 
 
    
 
-@section('page-header-title')
-<h1>{{ $post->title }}</h1>
-@endsection 
+{{--  @section('page-header-title') --}}
+<!-- <h1>{{ $post->title }}</h1> -->
+{{-- @endsection --}}
     
-@section('page-header-meta')
-<h4>{{ $post->excerpt }}
-</h4>
-@endsection 
+{{-- @section('page-header-meta') --}}
+<!-- <h4>{{ $post->excerpt }}</h4> -->
+{{-- @endsection   --}}
+
 
 
 @section('main')
@@ -31,7 +38,17 @@
 
 
 <div class="container">
-	<h1>{{ $post->title }} </h1>
+  <div class="row">
+  <div class="col s12 m12 l8">
+    <div class="post-thumbnail-area">
+      <img class="post-thumbnail" src="{{ route('image.show',['image2.jpg']) }}"  />
+    </div>
+    <div class="post-title-area ">
+      <h1>{{ $post->title }} </h1>
+    </div>
+    <div class="post-content-area">
+
+    
   <div class="post-category">
       <div class="row">
       <a href="">lifeinsidebraces</a> 
@@ -81,61 +98,17 @@
 
   </div>
   <hr>
-  <div class="recommended-posts">
-    <div class="row">
-      <center><h4>Recommended Posts</h4></center>
-    </div>
-    <div class="row">  
-    @foreach($recommendedPosts as $recommendedPost)     
-      <div class="col l4 s12 m6">
-        <a href="{{ route('blog.single',$recommendedPost->slug) }}">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{ route('image.show',$recommendedPost->featured_image) }}">                  
-        </div>
-        <div class="card-content grey lighten-5">
-          <span class="card-title">{{ $recommendedPost->title }}</span>
-          <p>{{ substr($recommendedPost->excerpt,0,100) }} </p>
-        </div>
-      </div>
-    </a>
-       </div>
-       @endforeach    
-      
+  
 
-        
-
+   </div> 
   </div>
-    </div>
 
-    <div class="popular-posts">
-    <div class="row">
-      <center><h4>Popular Posts</h4></center>
-    </div>
-    <div class="row">  
-    @foreach($popularPosts as $popularPost)     
-      <div class="col l4 s12 m6">
-        <a href="{{ route('blog.single',$popularPost->slug) }}">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{ route('image.show',$popularPost->featured_image) }}">                  
-        </div>
-        <div class="card-content grey lighten-5">
-          <span class="card-title">{{ $popularPost->title }}</span>
-          <p>{{ substr($popularPost->excerpt,0,100) }} </p>
-        </div>
-      </div>
-    </a>
-       </div>
-       @endforeach    
-     
 
-      
+<!-- sidebar as a column , should used in a row with another column -->   
+  @include('partials._sidebar') 
 
-        
-  </div>
-    </div>
-    
+	
+    </div> <!-- row -->
   </div>
 
 @endsection

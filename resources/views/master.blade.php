@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        @yield('share-meta')       
+      @yield('share-meta')      
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -36,5 +36,5 @@
     {!! Html::script('js/frontend/masonry.pkgd.min.js') !!}
     @yield('footer-scripts')
     </body>
-    @include('partials._footer') 
+     @include('partials._footer') 
 </html>

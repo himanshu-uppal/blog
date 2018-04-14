@@ -98,7 +98,7 @@ nav{
 }
 
 .brand-logo{
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 font-size: -webkit-xxx-large;   
     font-family: 'Titillium Web', sans-serif;
 }
@@ -325,4 +325,20 @@ footer{
   color: #000;
   text-decoration: none !important;
 
+}
+.post-thumbnail-area{
+  padding: 2%;
+
+}
+.post-thumbnail{
+  width: 100%;
+
+}
+.post-content-area{
+
+}
+.post-title-area{
+  top: -5%;
+  position: relative;
+  
 }
