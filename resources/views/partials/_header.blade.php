@@ -2,10 +2,16 @@
 @section('page-header-tag')
     @show 
 <div class="container">
-<nav>
+  <div class="header-banner">
+    <div class="header-image-area">
+      <a href="#">
+        <img class="header-image" src="{{ route('image.show','logo.jpg') }}" >
+      </a>
+</div>    
+  </div>
+{{--<nav>
     <div class="nav-wrapper ">
-       <a href="#" class="brand-logo center">Logo</a>
-{{--
+       
       <a href="{{ route('index') }}" class="brand-logo  light-green-text text-accent-3">lifeinsidebraces</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="grey-text material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down ">
@@ -23,9 +29,10 @@
         <li><a href="{{ route('team') }}">Our Team</a></li>
         <li><a href="{{ route('contact') }}">Contact Us</a></li>
       </ul>
-    --}}
+   
     </div>
   </nav>
+   --}}
 </div> <!-- container ends -->
 <!-- 
   <div class="page-header-content  center ">

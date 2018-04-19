@@ -1,3 +1,4 @@
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -72,13 +73,19 @@ header a:visited{
   text-decoration: none !important;
 
 }*/
+
+
 nav{
   background-color: none;
   background-color: transparent !important;
+  box-shadow:none !important;
+  -webkit-box-shadow:none !important;
+  margin-top: 2%;
+  margin-bottom: 2%;
 
 }
 .nav-wrapper{
-      background-color: rgba(0,0,0,0.5);
+      /*background-color: rgba(0,0,0,0.5);*/
 
  /* background: #ccff90;
     background: linear-gradient(to left, #ccff90 ,#fffde7);  */
@@ -97,6 +104,22 @@ nav{
 
 }
 
+.header-banner{
+  margin: 3% 0 2% 0;
+
+}
+.header-image-area{
+  width: 50%;
+  margin: 0 auto;
+
+
+}
+.header-image{
+  width: 500px;
+  pointer-events:all;
+
+
+}
 .brand-logo{
 	/*margin-left: 5%;*/
 font-size: -webkit-xxx-large;   
@@ -215,10 +238,11 @@ footer{
    font-size: large;
 
               }
-              .post-content img{
+.post-content img{
                /* width: 600px;
     height: 600px;*/
-     width:100% ;
+     /*width:100% ;*/
+     width:70% ;
    
     padding: 2%;
 
@@ -328,10 +352,11 @@ footer{
 }
 .post-thumbnail-area{
   padding: 2%;
+  text-align: center;
 
 }
 .post-thumbnail{
-  width: 100%;
+  width: 70%;
 
 }
 .post-content-area{

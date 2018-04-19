@@ -29,5 +29,9 @@ class Post extends Model
     public function admin(){
     	return $this->belongsTo('App\Admin');
     }
+
+    public function font(){
+        return $this->belongsTo('App\Font');
+    }
    
 }

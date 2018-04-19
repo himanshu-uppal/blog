@@ -80,6 +80,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=1;
         $post->save();
 
         $post = new Post();        
@@ -150,6 +151,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=2;
         $post->save();
 
 
@@ -221,6 +223,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=3;
         $post->save();
 
 
@@ -291,6 +294,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=4;
         $post->save();
 
 
@@ -362,6 +366,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=5;
         $post->save();
 
         $post = new Post();        
@@ -432,6 +437,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=6;
         $post->save();
 
 
@@ -503,6 +509,7 @@ class PostsTableSeeder extends Seeder
         $post->status="1";
         $post->type="1";
         $post->created_at= date('Y-m-d H:i:s');
+        $post->font_id=7;
         $post->save();
 
     }
