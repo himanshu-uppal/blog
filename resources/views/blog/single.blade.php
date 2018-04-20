@@ -23,7 +23,7 @@
   <div class="row">
   <div class="col s12 m12 l8">
     <div class="post-thumbnail-area">
-      <img class="post-thumbnail" src="{{ route('image.show',['image2.jpg']) }}"  />
+      <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}"  />
     </div>
     <div class="post-title-area ">
       <h1> {{ $post->title }} </h1>

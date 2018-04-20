@@ -38,7 +38,7 @@
     </div>
 
      <div class="post-thumbnail-area">
-      <img class="post-thumbnail" src="{{ route('image.show',['image2.jpg']) }}"  />
+      <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}"  />
     </div>
    
     <div class="post-content-area">

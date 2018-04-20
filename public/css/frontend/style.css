@@ -399,6 +399,20 @@ footer{
 
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .header-image-area{
+  width: 100%;
+  
+
+
+}
+  
+ .header-image{
+  width: 330px;
+  
+
+
+} 
+
     
 
 }
@@ -411,7 +425,7 @@ footer{
 }
   
  .header-image{
-  width: 330px;
+  width:320px;
   
 
 
@@ -428,3 +442,18 @@ footer{
 
 
 }
+
+
+
+ 
+  
+
+
+
+
+        
+
+
+
+}
+

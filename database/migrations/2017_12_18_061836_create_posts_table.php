@@ -26,7 +26,7 @@ class CreatePostsTable extends Migration
             $table->bigInteger('post_id')->unsigned()->nullable('true'); //post_parent            
             $table->integer('status')->unsigned()->default(1);
             $table->integer('type')->unsigned()->default(1);
-            $table->integer('font_id')->unsigned()->nullable();
+            $table->integer('font_id')->unsigned()->nullable('true');
             $table->dateTime('published_at');
             $table->softDeletes();          
             $table->timestamps();

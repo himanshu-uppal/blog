@@ -84,6 +84,7 @@ class PostController extends Controller
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
+        $post->font_id=1;
         $post->save();
         $category=$request->categories;
        
@@ -128,8 +129,10 @@ class PostController extends Controller
         $post = Post::find($id);
        
          $categories = Category::all(['category','id']);
-         $categoriesSelected = [1,2]; //should not be here
-
+         foreach ($post->categories as $category) {
+            $post_categories[] = $category->id;
+        }
+         $categoriesSelected = $post_categories; 
           $this->authorize('update', $post);
 
 return view('admin.posts.edit')->withPost($post)->withCategories($categories)->withCategoriesSelected($categoriesSelected);
@@ -173,16 +176,41 @@ return view('admin.posts.edit')->withPost($post)->withCategories($categories)->w
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
+        $post->font_id=1;
         $post->save();
         $category=$request->categories;
+
+        //$post_categories[];
+        //print_r($request->categories);
+        foreach ($post->categories as $category) {
+            $post_categories[] = $category->id;
+        }
+
+        $categories_remove= array_diff($post_categories, $request->categories);
+        //print_r( $categories_remove);
+
+        $categories_add= array_diff($request->categories,$post_categories);
+        //print_r( $categories_add);
+       // print_r($post_categories);
+        //  $post_categories_update[] = array_except($request->categories,$post_categories);
+        // print_r($post_categories_update);
+
+        
+
+        
+              
        
-       
-    foreach($category as $c){
+    foreach($categories_remove as $category_remove){
+             DB::table('category_post')->where('post_id','=',$post->id)->where('category_id','=',$category_remove)->delete();            
+      }
+
+      foreach($categories_add as $category_add){
              DB::table('category_post')->insert(
-            ['post_id' => $post->id, 'category_id' => $c]
+            ['post_id' => $post->id, 'category_id' => $category_add]
         );
 
         }
+         
 
        
        
