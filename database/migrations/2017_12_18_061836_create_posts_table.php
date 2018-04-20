@@ -26,6 +26,7 @@ class CreatePostsTable extends Migration
             $table->bigInteger('post_id')->unsigned()->nullable('true'); //post_parent            
             $table->integer('status')->unsigned()->default(1);
             $table->integer('type')->unsigned()->default(1);
+            $table->integer('font_id')->unsigned()->nullable();
             $table->dateTime('published_at');
             $table->softDeletes();          
             $table->timestamps();
@@ -35,6 +36,10 @@ class CreatePostsTable extends Migration
             $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             // ->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('font_id')->references('id')->on('fonts')->onDelete('cascade');
+
+        
+           
         
         });
     }

@@ -14,8 +14,8 @@
           <img src="{{ route('image.show',$popularPost->featured_image) }}">                  
         </div>
         <div class="card-content grey lighten-5">
-          <span class="card-title" style="font-family:{{$post->font->name}};">{{ $popularPost->title }}</span>
-          <p style="font-family:{{$post->font->name}};">{{ substr($popularPost->excerpt,0,100) }} </p>
+          <span class="card-title" style="font-family:{{$popularPost->font->name}};">{{ $popularPost->title }}</span>
+          <p style="font-family:{{$popularPost->font->name}};">{{ substr($popularPost->excerpt,0,100) }} </p>
         </div>
       </div>
     </a>
@@ -42,8 +42,8 @@
           <img src="{{ route('image.show',$recommendedPost->featured_image) }}">                  
         </div>
         <div class="card-content grey lighten-5">
-          <span class="card-title" style="font-family:{{$post->font->name}};">{{ $recommendedPost->title }}</span>
-          <p style="font-family:{{$post->font->name}};">{{ substr($recommendedPost->excerpt,0,100) }} </p>
+          <span class="card-title" style="font-family:{{$recommendedPost->font->name}};">{{ $recommendedPost->title }}</span>
+          <p style="font-family:{{$recommendedPost->font->name}};">{{ substr($recommendedPost->excerpt,0,100) }} </p>
         </div>
       </div>
     </a>
