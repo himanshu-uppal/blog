@@ -91,6 +91,8 @@ nav{
     background: linear-gradient(to left, #ccff90 ,#fffde7);  */
 
 }
+
+
  header a:hover,
  header a:focus,
   header a:active{
@@ -200,7 +202,16 @@ footer{
 
 }
   
-
+.post .post-title-area a:hover,
+.post .post-title-area a:focus,
+.post .post-ctitle-area a:active{
+  color: #000  !important;
+  text-decoration: none !important;
+}
+.post .post-title-area a:visited{
+  color: #616161;
+  text-decoration: none !important;
+}
 
 
  .post-category a:hover,
@@ -271,7 +282,7 @@ footer{
 }
 
 .post-content a:hover,
-.post-contenta:focus,
+.post-content a:focus,
 .post-content a:active{
   color:  #688c00 !important;
   text-decoration: none !important;
@@ -366,4 +377,54 @@ footer{
   top: -5%;
   position: relative;
   
+}
+
+
+
+
+/*MEDIA QUERIES*/
+@media only screen and (min-width: 942px) and (max-width: 1170px) {
+    
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+   
+   
+
+
+
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+
+}
+@media only screen and (max-width: 479px) {
+  .header-image-area{
+  width: 100%;
+  
+
+
+}
+  
+ .header-image{
+  width: 330px;
+  
+
+
+} 
+
+ 
+  
+
+
+
+
+        
+
+
+
 }

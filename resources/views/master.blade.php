@@ -12,9 +12,9 @@
         <link href="https://fonts.googleapis.com/css?family=Dosis:700|Titillium+Web:700|Exo+2:400,900" rel="stylesheet">
         <script src="https://use.fontawesome.com/2b18a9f74f.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Allura|Bilbo|Dawning+of+a+New+Day|Dynalight|Engagement|Euphoria+Script|Fredericka+the+Great|Gaegu|Italianno|Just+Me+Again+Down+Here|Kanit|League+Script|Lovers+Quarrel|Monsieur+La+Doulaise|Mr+De+Haviland|Mrs+Saint+Delafield|Nosifer|Oregano|Pacifico|Parisienne|Qwigley|Rancho|Rouge+Script|Ruthie|Sacramento|Sail|Satisfy|Vibur|Yesteryear" rel="stylesheet">
-        {!! Html::style('css/frontend/prism.css') !!}
-        {!! Html::style('css/frontend/style.css') !!}
+        {!! Html::style('css/frontend/prism.css') !!}        
         {!! Html::style('css/frontend/materialize.css') !!}
+        {!! Html::style('css/frontend/style.css') !!}
 
 
   

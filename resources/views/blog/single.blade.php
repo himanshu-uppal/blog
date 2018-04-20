@@ -26,7 +26,7 @@
       <img class="post-thumbnail" src="{{ route('image.show',['image2.jpg']) }}"  />
     </div>
     <div class="post-title-area ">
-      <h1>{{ $post->title }} </h1>
+      <h1> {{ $post->title }} </h1>
     </div>
     <div class="post-content-area">
 

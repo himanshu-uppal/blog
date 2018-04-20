@@ -31,6 +31,7 @@
     
     <!-- <div class="row masonry-grid" data-masonry='{ "itemSelector": ".masonry-grid-item" }'>  -->
     @foreach($posts as $post) 
+    <div class="post">
    
       <div class="post-title-area " >
       <a href="{{ route('blog.single',$post->slug) }}"><h1 style="font-family:{{$post->font->name}};">{{ $post->title }} </h1></a>
@@ -71,6 +72,7 @@
   
 
    </div>
+ </div>
        @endforeach
 
        
