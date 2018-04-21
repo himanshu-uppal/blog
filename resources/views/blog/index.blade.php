@@ -29,7 +29,7 @@
     
 
     
-    <!-- <div class="row masonry-grid" data-masonry='{ "itemSelector": ".masonry-grid-item" }'>  -->
+   {{-- <div class="row masonry-grid" data-masonry='{ "itemSelector": ".masonry-grid-item" }'>   --}}
     @foreach($posts as $post) 
     <div class="post">
    
@@ -44,12 +44,12 @@
     <div class="post-content-area">
 
     
-  <div class="post-category">
+{{-- <div class="post-category">
       <div class="row">
       <a href="">lifeinsidebraces</a> 
                  
     </div>
-    </div>
+    </div> --}}
    
 <div class="post-content" style="font-family:{{$post->font->name}};font-size:{{$post->font->size}};">  
    {!! $post->content !!}   

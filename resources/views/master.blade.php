@@ -7,6 +7,7 @@
       @yield('share-meta')      
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="icon" href="{{ route('image.show', 'favicon.png') }}" type="image/x-icon"/>
 
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dosis:700|Titillium+Web:700|Exo+2:400,900" rel="stylesheet">
