@@ -40,6 +40,25 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class=" col s8">
+
+    				
+        
+    				
+			 {{ Form::label('font',' Post Font:')}} </br></br>
+		
+		<select name="font" >
+			@foreach($fonts as $font)
+
+        	<option  value="{{$font->id}}" id="{{$font->id}}"  @if($font->id==$post->font->id) selected @else  @endif >{{$font->name}}({{$font->size}})</option> 		
+										
+				
+			@endforeach
+		</select>
+			
+			</div>	
+		</div>
+		<div class="row">
 			<div class="input-field col s10">
 				{{ Form::label('excerpt','Excerpt:')}}
 				{{ Form::textarea('excerpt',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}

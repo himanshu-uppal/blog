@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\Font;
 use Session;
 use Input;
 use Gate;
@@ -43,9 +44,10 @@ class PostController extends Controller
     
          $categories = Category::all(['category','id']);
          $posts = Post::orderBy('id','DESC')->get(['id','title']);
+         $fonts = Font::all(['name','id','size']);
        
        // $status = Status::all(['status','id']);        
-        return view('admin.posts.create')->withCategories($categories)->withPosts($posts);
+        return view('admin.posts.create')->withCategories($categories)->withFonts($fonts)->withPosts($posts);
 
     
         
@@ -75,6 +77,8 @@ class PostController extends Controller
         // print_r($post_parent);       
         /* Check ended */
 
+
+
         $post = new Post();
         $post->admin_id = Auth::user()->id;
         $post->title=$request->title;
@@ -84,7 +88,7 @@ class PostController extends Controller
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
-        $post->font_id=1;
+        $post->font_id=$request->font;
         $post->save();
         $category=$request->categories;
        
@@ -127,15 +131,17 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-       
+
+       $post_categories[] = array();
          $categories = Category::all(['category','id']);
+         $fonts = Font::all(['name','id','size']);
          foreach ($post->categories as $category) {
             $post_categories[] = $category->id;
         }
          $categoriesSelected = $post_categories; 
           $this->authorize('update', $post);
 
-return view('admin.posts.edit')->withPost($post)->withCategories($categories)->withCategoriesSelected($categoriesSelected);
+return view('admin.posts.edit')->withPost($post)->withFonts($fonts)->withCategories($categories)->withCategoriesSelected($categoriesSelected);
 
         
     }
@@ -176,7 +182,7 @@ return view('admin.posts.edit')->withPost($post)->withCategories($categories)->w
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
         $post->published_at = date('Y-m-d H:i:s');
-        $post->font_id=1;
+        $post->font_id=$request->font;
         $post->save();
         $category=$request->categories;
 

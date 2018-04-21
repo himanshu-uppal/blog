@@ -22,12 +22,13 @@
 <div class="container">
   <div class="row">
   <div class="col s12 m12 l8">
+     <div class="post-title-area ">
+      <h1 style="font-family:{{$post->font->name}};"> {{ $post->title }} </h1>
+    </div>
     <div class="post-thumbnail-area">
       <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}"  />
     </div>
-    <div class="post-title-area ">
-      <h1 style="font-family:{{$post->font->name}};"> {{ $post->title }} </h1>
-    </div>
+   
     <div class="post-content-area">
 
     
