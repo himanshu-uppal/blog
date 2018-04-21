@@ -4,7 +4,7 @@
 <div class="container">
   <div class="header-banner">
     <div class="header-image-area">
-      <a href="#">
+      <a href="{{ route('blog.index') }}">
         <img class="header-image" src="{{ route('image.show','logo.jpg') }}" >
       </a>
 </div>    
