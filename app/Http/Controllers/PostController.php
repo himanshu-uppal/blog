@@ -186,8 +186,8 @@ return view('admin.posts.edit')->withPost($post)->withFonts($fonts)->withCategor
         $post->save();
         $category=$request->categories;
 
-        //$post_categories[];
-        //print_r($request->categories);
+       
+        $post_categories = array();
         foreach ($post->categories as $category) {
             $post_categories[] = $category->id;
         }
