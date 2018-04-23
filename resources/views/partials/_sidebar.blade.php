@@ -1,9 +1,29 @@
 <!-- sidebar as a column , should used in a row with another column -->
    
   <div class="col s12 m12 l4">
+    <div class="about-blog">
+      <div class="row">
+      <center><h4>About {life}</h4></center>
+    </div>{{--
+      <div class="row center">
+        <img class="about-image" src="{{ route('image.show','image3.jpg') }}" />
+      </div> --}}
+      <div class="row" style="font-family:Pacifico;font-size:large">
+      <center><strong>The life we live</br>
+        The code we write</br>
+        The food we eat </br>
+        The love we make </br>
+        The places we go </br>
+        The nature we feel</br>
+        The songs we listen.</strong>
+
+      </center>
+    </div>
+    </div>
+    <hr>
     <div class="popular-posts">
     <div class="row">
-      <center><h4>Heading</h4></center>
+      <center><h4>Popular Posts</h4></center>
     </div>
     <div class="row">  
     @foreach($popularPosts as $popularPost)     
@@ -28,10 +48,10 @@
         
   </div>
     </div>
-
+<hr>
     <div class="recommended-posts">
     <div class="row">
-      <center><h4>Heading</h4></center>
+      <center><h4>Recommended Posts</h4></center>
     </div>
     <div class="row">  
     @foreach($recommendedPosts as $recommendedPost)     
@@ -55,5 +75,6 @@
 
   </div>
     </div>
+    <hr>
   </div>
   <!-- sidebar ends -->

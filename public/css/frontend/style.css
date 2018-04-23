@@ -117,7 +117,7 @@ nav{
 
 }
 .header-image{
-  width: 500px;
+  width: 550px;
   pointer-events:all;
 
 
@@ -151,6 +151,9 @@ h1,h2,h3,h4,h5,h6{
 }
 footer{
 
+}
+.about-image{
+  width: 80%;
 }
 .page-header-image{
     width: 50vw;
@@ -253,7 +256,7 @@ footer{
                /* width: 600px;
     height: 600px;*/
      /*width:100% ;*/
-     width:70% ;
+     width:80% ;
    
     padding: 2%;
 
@@ -367,7 +370,7 @@ footer{
 
 }
 .post-thumbnail{
-  width: 70%;
+  width: 80%;
 
 }
 .post-content-area{
