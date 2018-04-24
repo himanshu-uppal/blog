@@ -97,6 +97,35 @@
 			</div>	
 		</div>
 		<div class="row">
+			<div class=" col s8">  
+
+				{{ Form::label('type',' Post Type:')}} </br></br>
+
+				<select name="type" >			
+
+					<option  value="0" id="0" @if($post->status==0) selected @else  @endif>Public</option>
+					<option  value="1" id="1" @if($post->status==1) selected @else  @endif>Private</option>		
+
+				</select>
+				
+			</div>	
+		</div>	
+		<div class="row">
+			<div class=" col s8">  
+
+				{{ Form::label('status',' Post Status:')}} </br></br>
+
+				<select name="status" >	
+
+
+					<option  value="1" id="1" @if($post->status==1) selected @else  @endif>Draft</option>
+					<option  value="0" id="0" @if($post->status==0) selected @else  @endif>Publish</option>		
+
+				</select>
+				
+			</div>	
+		</div>	
+		<div class="row">
 			<div class=" col s10">
 
     				

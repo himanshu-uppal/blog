@@ -20,6 +20,7 @@
       </center>
     </div>
     </div>
+   
     <hr>
     <div class="popular-posts">
     <div class="row">

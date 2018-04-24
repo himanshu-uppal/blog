@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
 
     public function getIndex(){
-        $posts= Post::orderBy('id','DESC')->take(6)->get();
+        $posts= Post::orderBy('id','DESC')->simplePaginate(3);
         $recommended_posts = Post::orderBy('id','DESC')->take(3)->get();
         $popular_posts = Post::orderBy('id','DESC')->take(3)->get();
         

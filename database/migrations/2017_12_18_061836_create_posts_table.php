@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('featured_image');
-            $table->text('excerpt');
+            $table->text('excerpt')->nullable('true');
             $table->text('tags');
             $table->integer('comment_count')->unsigned()->default(0);          
             $table->bigInteger('post_id')->unsigned()->nullable('true'); //post_parent            

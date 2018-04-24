@@ -52,7 +52,16 @@
     </div> --}}
    
 <div class="post-content" style="font-family:{{$post->font->name}};font-size:{{$post->font->size}};">  
-   {!! $post->content !!}   
+   
+   @if($post->excerpt != '')
+   {!! $post->excerpt !!}
+   @else
+   {!! substr($post->content,0,300) !!}
+   @if(strlen($post->content)>300)
+   <a href="{{ route('blog.single',$post->slug) }}"><span class="read-more">...</span></a>
+   @endif
+   @endif 
+    
   </div>
   
     
@@ -87,6 +96,9 @@
 
 
   </div> <!-- posts ends -->
+   <div class="pagination-links">
+            {{ $posts->links() }}
+          </div>
   
      </div><!-- col for posts -->
 

@@ -15,12 +15,12 @@
 		<div class="row">
 			<div class="col s10">
 				{{ Form::label('label','Post Parent:')}}</br></br>
-				 <select name="post_parent">
-				 	<option value="" disabled selected>Choose your option</option>
-				@foreach($posts as $post)
-				  <option value="{{$post->id}}">{{$post->title}}</option>
-    				@endforeach
-    				   </select>
+				<select name="post_parent">
+					<option value="" disabled selected>Choose your option</option>
+					@foreach($posts as $post)
+					<option value="{{$post->id}}">{{$post->title}}</option>
+					@endforeach
+				</select>
 			</div>
 		</div>
 		<div class="row">
@@ -44,7 +44,7 @@
 				</script>
 			</div>
 		</div>
-	
+
 		<div class="row">
 			<div class="input-field col s10">
 				{{ Form::label('excerpt','Excerpt:')}}
@@ -69,47 +69,76 @@
 						
 				
 			</div>
-			</div>  -->
-	
+		</div>  -->
+
 		<div class="row">
 			<div class=" col s8">
 
-    				
-        
-    				
-			 {{ Form::label('category',' Post Category:')}} </br></br>
-		
-		
-			@foreach($categories as $category)
 
-        	<input type="checkbox" name="categories[]" value="{{$category->id}}" id="{{$category->id}}" /> 
 
-      <label for="{{$category->id}}">{{$category->category}}</label></br>
 
-			
-										
+				{{ Form::label('category',' Post Category:')}} </br></br>
+
+
+				@foreach($categories as $category)
+
+				<input type="checkbox" name="categories[]" value="{{$category->id}}" id="{{$category->id}}" /> 
+
+				<label for="{{$category->id}}">{{$category->category}}</label></br>
+
+
+
 				
-			@endforeach
-			
+				@endforeach
+
 			</div>	
 		</div>	
-			<div class="row">
+		<div class="row">
+			<div class=" col s8">  
+
+				{{ Form::label('type',' Post Type:')}} </br></br>
+
+				<select name="type" >			
+
+					<option  value="0" id="0" >Public</option>
+					<option  value="1" id="1" selected>Private</option>		
+
+				</select>
+				
+			</div>	
+		</div>	
+		<div class="row">
+			<div class=" col s8">  
+
+				{{ Form::label('status',' Post Status:')}} </br></br>
+
+				<select name="status" >			
+
+					<option  value="1" id="1" selected>Draft</option>
+					<option  value="0" id="0" >Publish</option>		
+
+				</select>
+				
+			</div>	
+		</div>	
+
+		<div class="row">
 			<div class=" col s8">
 
-    				
-        
-    				
-			 {{ Form::label('font',' Post Font:')}} </br></br>
-		
-		<select name="font" >
-			@foreach($fonts as $font)
 
-        	<option  value="{{$font->id}}" id="{{$font->id}}">{{$font->name}}({{$font->size}})</option> 		
-										
-				
-			@endforeach
-		</select>
-			
+
+
+				{{ Form::label('font',' Post Font:')}} </br></br>
+
+				<select name="font" >
+					@foreach($fonts as $font)
+
+					<option  value="{{$font->id}}" id="{{$font->id}}">{{$font->name}}({{$font->size}})</option> 		
+
+
+					@endforeach
+				</select>
+
 			</div>	
 		</div>	
 		<div class="row">
@@ -119,8 +148,8 @@
 			</div>
 		</div>
 	</div>
-		</main>
-	@endsection
+</main>
+@endsection
 @section('footer-scripts')
-	{!! Html::script('js/parsley.min.js') !!}
+{!! Html::script('js/parsley.min.js') !!}
 @endsection
