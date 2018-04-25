@@ -50,6 +50,7 @@
   </div>
     </div>
 <hr>
+{{--
     <div class="recommended-posts">
     <div class="row">
       <center><h4>Recommended Posts</h4></center>
@@ -76,6 +77,8 @@
 
   </div>
     </div>
-    <hr>
+     <hr>
+    --}}
+   
   </div>
   <!-- sidebar ends -->
