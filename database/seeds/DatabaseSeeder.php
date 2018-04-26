@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RolesTableSeeder::class);
         $this->call(AdminsTableSeeder::class);
-         $this->call(UsersTableSeeder::class);
+        // $this->call(UsersTableSeeder::class);
          $this->call(FontsTableSeeder::class);
          $this->call(PostsTableSeeder::class);         
          $this->call(CategoriesTableSeeder::class);
@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
          $this->call(CategoryPostTableSeeder::class);      
          $this->call(PermissionsTableSeeder::class);
          $this->call(PermissionsRolesTableSeeder::class);
+         $this->call(PreviousDataSeeder::class);
+
          
     }
 }

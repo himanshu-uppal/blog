@@ -15,41 +15,42 @@ class CategoriesTableSeeder extends Seeder
         
         $category = new Category();
         $category->category = "Programming";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
+        $category->description="";
         $category->save();
 
         $category = new Category();
         $category->category = "Life";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
+        $category->description="";
         $category->save();
 
         $category = new Category();
-        $category->category = "Foods";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
+        $category->category = "Food";
+        $category->description="";
         $category->save();
 
         $category = new Category();
         $category->category = "Technology";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $category->category_id = 1 ;
+        $category->description="";
         $category->save();
 
         $category = new Category();
-        $category->category = "Java";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $category->category_id = 1;
+        $category->category = "Nature";
+        $category->description="";
         $category->save();
 
         $category = new Category();
-        $category->category = "Android";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $category->category_id = 2;
+        $category->category = "Songs";
+        $category->description="";
         $category->save();
 
         $category = new Category();
-        $category->category = "Java Interfaces";
-        $category->description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo";
-        $category->category_id = 5;
+        $category->category = "Travel";
+        $category->description="";
+        $category->save();
+
+        $category = new Category();
+        $category->category = "Random";
+        $category->description="";
         $category->save();
     }
 }

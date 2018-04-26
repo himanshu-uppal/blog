@@ -93,14 +93,19 @@ class PostController extends Controller
         $post->status=$request->status;
         $post->save();
         $category=$request->categories;
-       
-       
-    foreach($category as $c){
+
+        if($category!=null){
+            foreach($category as $c){
              DB::table('category_post')->insert(
             ['post_id' => $post->id, 'category_id' => $c]
         );
 
         }
+
+        }
+       
+       
+    
 
         //Session::flash('key','value');
         Session::flash('success','The blog post was successfully saved !');
