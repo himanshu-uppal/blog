@@ -38,9 +38,9 @@
           <span class="card-title" style="font-family:{{$popularPost->font->name}};">{{ $popularPost->title }}</span>
           <span style="font-family:{{$popularPost->font->name}};">
             @if($post->excerpt != '')
-   {!! substr($recommendedPost->excerpt,0,100) !!} 
+   {!! substr($popularPost->excerpt,0,100) !!} 
    @else
-   {!! substr($post->content,0,100) !!}
+   {!! substr($popularPost->content,0,100) !!}
    
    @endif  
           </p>
@@ -76,7 +76,7 @@
              @if($post->excerpt != '')
    {!! substr($recommendedPost->excerpt,0,200) !!} 
    @else
-   {!! substr($post->content,0,200) !!}
+   {!! substr($recommendedPost->content,0,200) !!}
    
    @endif 
             
