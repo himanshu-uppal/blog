@@ -36,11 +36,11 @@
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title" style="font-family:{{$popularPost->font->name}};">{{ $popularPost->title }}</span>
-          <p style="font-family:{{$popularPost->font->name}};">
+          <span style="font-family:{{$popularPost->font->name}};">
             @if($post->excerpt != '')
-   {!! substr($recommendedPost->excerpt,0,200) !!} 
+   {!! substr($recommendedPost->excerpt,0,100) !!} 
    @else
-   {!! substr($post->content,0,200) !!}
+   {!! substr($post->content,0,100) !!}
    
    @endif  
           </p>
