@@ -48,13 +48,13 @@
 		<div class="row">
 			<div class="input-field col s10">
 				{{ Form::label('excerpt','Excerpt:')}}
-				{{ Form::textarea('excerpt',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}
+				{{ Form::textarea('excerpt',null,array('class'=>'materialize-textarea ')) }}
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s10">
 				{{ Form::label('tags','Post Hash tags:')}}
-				{{ Form::textarea('tags',null,array('class'=>'materialize-textarea validate','data-parsley-required'=>'')) }}
+				{{ Form::textarea('tags',null,array('class'=>'materialize-textarea ')) }}
 			</div>
 		</div>
 		<div class="row">

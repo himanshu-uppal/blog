@@ -36,7 +36,14 @@
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title" style="font-family:{{$popularPost->font->name}};">{{ $popularPost->title }}</span>
-          <p style="font-family:{{$popularPost->font->name}};">{{ substr($popularPost->excerpt,0,100) }} </p>
+          <p style="font-family:{{$popularPost->font->name}};">
+            @if($post->excerpt != '')
+   {!! substr($recommendedPost->excerpt,0,200) !!} 
+   @else
+   {!! substr($post->content,0,200) !!}
+   
+   @endif  
+          </p>
         </div>
       </div>
     </a>
@@ -65,7 +72,15 @@
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title" style="font-family:{{$recommendedPost->font->name}};">{{ $recommendedPost->title }}</span>
-          <p style="font-family:{{$recommendedPost->font->name}};">{{ substr($recommendedPost->excerpt,0,100) }} </p>
+          <p style="font-family:{{$recommendedPost->font->name}};">
+             @if($post->excerpt != '')
+   {!! substr($recommendedPost->excerpt,0,200) !!} 
+   @else
+   {!! substr($post->content,0,200) !!}
+   
+   @endif 
+            
+          </p>
         </div>
       </div>
     </a>

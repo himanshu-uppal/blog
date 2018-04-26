@@ -21,7 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('slug')->unique();
             $table->string('featured_image');
             $table->text('excerpt')->nullable('true');
-            $table->text('tags');
+            $table->text('tags')->nullable('true');
             $table->integer('comment_count')->unsigned()->default(0);          
             $table->bigInteger('post_id')->unsigned()->nullable('true'); //post_parent            
             $table->integer('status')->unsigned()->default(1);
