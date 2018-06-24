@@ -58,7 +58,8 @@
    @else
     {!! substr($post->content,0,300) !!}
     @if(strlen($post->content)>300)
-      <a class="read-more" href="{{ route('blog.single',$post->slug) }}">...</a>
+      {{-- <a class="read-more" href="{{ route('blog.single',$post->slug) }}">...</a> --}}
+      <a href="{{ route('blog.single',$post->slug) }}">...</a>
     @endif
    @endif 
     
