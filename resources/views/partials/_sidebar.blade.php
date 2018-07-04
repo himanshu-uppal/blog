@@ -32,7 +32,7 @@
         <a href="{{ route('blog.single',$popularPost->slug) }}">
       <div class="card">
         <div class="card-image">
-          <img src="{{ route('image.show',$popularPost->featured_image) }}">                  
+          <img src="{{ route('image.show',$popularPost->featured_image) }}" alt="lifeinsidebraces programming coding life.inside.braces Himanshu ">                  
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title" style="font-family:{{$popularPost->font->name}};">{{ $popularPost->title }}</span>
@@ -68,7 +68,7 @@
         <a href="{{ route('blog.single',$recommendedPost->slug) }}">
       <div class="card">
         <div class="card-image">
-          <img src="{{ route('image.show',$recommendedPost->featured_image) }}">                  
+          <img src="{{ route('image.show',$recommendedPost->featured_image) }}" alt="lifeinsidebraces programming coding life.inside.braces Himanshu ">                  
         </div>
         <div class="card-content grey lighten-5">
           <span class="card-title" style="font-family:{{$recommendedPost->font->name}};">{{ $recommendedPost->title }}</span>
