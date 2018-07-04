@@ -6,7 +6,7 @@
       <center><h4>About {life}</h4></center>
     </div>{{--
       <div class="row center">
-        <img class="about-image" src="{{ route('image.show','image3.jpg') }}" />
+        <img class="about-image" src="{{ route('image.show','image3.jpg') }}" alt="lifeinsidebraces programming coding life.inside.braces Himanshu " />
       </div> --}}
       <div class="row" style="font-family:Pacifico;font-size:large">
       <center><strong>The life we live</br>

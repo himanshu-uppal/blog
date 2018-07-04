@@ -5,7 +5,7 @@
   <div class="header-banner">
     <div class="header-image-area">
       <a href="{{ route('blog.index') }}">
-        <img class="header-image" src="{{ route('image.show','logo.jpg') }}" >
+        <img class="header-image" src="{{ route('image.show','logo.jpg') }}" alt="lifeinsidebraces programming coding life.inside.braces Himanshu ">
       </a>
 </div>    
   </div>

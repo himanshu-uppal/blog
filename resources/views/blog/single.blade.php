@@ -26,7 +26,7 @@
       <h1 style="font-family:{{$post->font->name}};"> {{ $post->title }} </h1>
     </div>
     <div class="post-thumbnail-area">
-      <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}"  />
+      <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}"  alt="lifeinsidebraces programming coding life.inside.braces Himanshu " />
     </div>
    
     <div class="post-content-area">
