@@ -87,6 +87,7 @@ class PostController extends Controller
         $post->excerpt=$request->excerpt;
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
+        $post->featured_image_alt_text=$request->featured_image_alt_text;
         $post->published_at = date('Y-m-d H:i:s');
         $post->font_id=$request->font;
         $post->type=$request->type;
@@ -188,6 +189,7 @@ return view('admin.posts.edit')->withPost($post)->withFonts($fonts)->withCategor
         $post->excerpt=$request->excerpt;
         $post->tags=$request->tags;
         $post->featured_image=$request->featured_image;
+        $post->featured_image_alt_text=$request->featured_image_alt_text;
         //$post->published_at = date('Y-m-d H:i:s');
         $post->type=$request->type;
         $post->status=$request->status;

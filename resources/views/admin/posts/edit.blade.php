@@ -58,6 +58,12 @@
 				{{ Form::text('featured_image',null,array('class'=>'validate','data-parsley-required'=>'')) }}
 			</div>
 		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				{{ Form::label('featured_image_alt_text','Featured Image Alt Image Text')}}
+				{{ Form::text('featured_image_alt_text',null,array('class'=>'validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
 		<!-- <div class="row">
 		
 			<div class="input-field col s10">
