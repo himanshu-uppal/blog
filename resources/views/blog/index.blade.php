@@ -54,7 +54,7 @@
 <div class="post-content" style="font-family:{{$post->font->name}};font-size:{{$post->font->size}};">  
    
    @if($post->excerpt != '')
-    {!! $post->excerpt !!}
+    {!! $post->excerpt !!}<a class="read-more" href="{{ route('blog.single',$post->slug) }}">...</a> 
    @else
     {!! substr($post->content,0,300) !!}
     @if(strlen($post->content)>300)
