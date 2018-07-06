@@ -43,7 +43,9 @@ Route::group(['middleware'=>['web']],function(){
 	//Media
 	Route::resource('media','MediaController');
 	Route::post('media/delete','MediaController@delete')->name('media.delete');
-	
+
+	//Font
+	Route::resource('font','FontController');
 
 });
 

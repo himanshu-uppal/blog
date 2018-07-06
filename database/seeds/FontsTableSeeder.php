@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Font;
 
+
 class FontsTableSeeder extends Seeder
 {
     /**

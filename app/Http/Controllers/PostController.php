@@ -253,6 +253,8 @@ return view('admin.posts.edit')->withPost($post)->withFonts($fonts)->withCategor
          $this->authorize('delete', $post); 
         $post->delete();
         Session::flash('success','The blog post was successfully deleted !');
-        return redirect()->route('posts.index');    
+
+        $posts = Post::orderBy('id','DESC')->paginate(10);
+        return view('admin.posts.index')->withPosts($posts); 
     }
 }

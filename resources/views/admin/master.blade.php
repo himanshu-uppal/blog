@@ -18,7 +18,8 @@
        
           <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+     <link href="https://fonts.googleapis.com/css?family=Allura|Bilbo|Dawning+of+a+New+Day|Dynalight|Engagement|Euphoria+Script|Fredericka+the+Great|Gaegu|Italianno|Just+Me+Again+Down+Here|Kanit|League+Script|Lovers+Quarrel|Monsieur+La+Doulaise|Mr+De+Haviland|Mrs+Saint+Delafield|Nosifer|Oregano|Pacifico|Parisienne|Qwigley|Rancho|Rouge+Script|Ruthie|Sacramento|Sail|Satisfy|Vibur|Yesteryear" rel="stylesheet">
+        
       <!--Import CKEDITOR-->
       <script src="http://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
 

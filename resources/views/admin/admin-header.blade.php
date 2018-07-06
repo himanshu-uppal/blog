@@ -68,7 +68,21 @@
                     </div>
                   </li>
                 </ul>
-              </li>             
+              </li>  
+
+              <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                  <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Font</a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li><a href="{{route('font.index')}}">All Fonts</a></li>
+                        <li><a href="{{route('font.create')}}">Add New Font</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li> 
+
             </ul>
           </div>
         </li>
