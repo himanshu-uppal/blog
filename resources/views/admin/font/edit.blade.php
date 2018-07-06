@@ -34,7 +34,7 @@
 		<div class="row">
 			<div class="input-field col s6">
 				
-				<a href="{{ route('categories.show',$category->id) }}" class="btn red lighten-1 waves-effect waves-light">Cancel</a>
+				<a href="{{ route('font.index') }}" class="btn red lighten-1 waves-effect waves-light">Cancel</a>
 	
 			</div>
 			{{-- @can('update',$font)  --}}
