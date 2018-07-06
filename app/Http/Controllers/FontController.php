@@ -52,7 +52,7 @@ class FontController extends Controller
         
         $this->validate($request,[
             'name'=>'required|max:255|unique:fonts,name',
-            'size'=>'required|numeric',
+            'size'=>'required',
             ]);
 
         $font = new Font();
@@ -63,8 +63,8 @@ class FontController extends Controller
         //Session::flash('key','value');
         Session::flash('success','The blog font was successfully saved !');
 
-        //$fonts = Font::orderBy('id','DESC')->paginate(10);
-         $fonts = Font::orderBy('id','DESC');
+        $fonts = Font::orderBy('id','DESC')->paginate(10);
+         //$fonts = Font::orderBy('id','DESC');
         return view('admin.font.index')->withFonts($fonts);
     }
 
@@ -108,13 +108,13 @@ class FontController extends Controller
 
         if($request->name == $font->name){
              $this->validate($request,[
-             'size'=>'required|numeric',
+             'size'=>'required',
             ]);
         }
         else{
              $this->validate($request,[
             'name'=>'required|max:255|unique:fonts,name',
-            'size'=>'required|numeric',
+            'size'=>'required',
             ]);
         }
          //  $this->authorize('update', $font);
@@ -130,8 +130,8 @@ class FontController extends Controller
         //Session::flash('key','value');
         Session::flash('success','The blog font was successfully updated !');
 
-        //$fonts = Font::orderBy('id','DESC')->paginate(10);
-         $fonts = Font::orderBy('id','DESC');
+        $fonts = Font::orderBy('id','DESC')->paginate(10);
+         //$fonts = Font::orderBy('id','DESC');
         return view('admin.font.index')->withFonts($fonts);
 
     }
@@ -149,8 +149,8 @@ class FontController extends Controller
         $font->delete();
         Session::flash('success','The blog font was successfully deleted !');
         
-        //$fonts = Font::orderBy('id','DESC')->paginate(10);
-         $fonts = Font::orderBy('id','DESC');
+        $fonts = Font::orderBy('id','DESC')->paginate(10);
+         //$fonts = Font::orderBy('id','DESC');
         return view('admin.font.index')->withFonts($fonts);
     }
 }

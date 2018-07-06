@@ -64,6 +64,11 @@ Inani urbanitas ut eam, eos et populo doming periculis. Vim consul gubergren eff
 		</tbody>
 
 	</table>
+	 <div class = "row" >
+         <div class = "col s12" >
+		{{ $fonts->links() }}
+	</div>
+	</div>
 	
 		   </div>
 	</div>
