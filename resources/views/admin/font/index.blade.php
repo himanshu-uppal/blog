@@ -43,12 +43,12 @@ Inani urbanitas ut eam, eos et populo doming periculis. Vim consul gubergren eff
 		
 		<td>
 			<div class="row">
-				{{-- @can('update',$category) 
+				{{-- @can('update',$category) --}}
 				<div class="col s6">
 					<a href="{{ route('font.edit',$font->id) }}" class="btn ">Edit</a>
 			
 				</div>
-				 @endcan --}}
+				{{-- @endcan --}}
 				{{-- @can('delete',$category) 
 				<div class="col s6">
 					{!! Form::open(['route'=>['font.destroy',$font->id],'method'=>'DELETE']) !!}
