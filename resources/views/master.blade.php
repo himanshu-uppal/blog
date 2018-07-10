@@ -10,12 +10,12 @@
 
             gtag('config', 'UA-121702521-1');
         </script>
-       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-9716148949716089",
-          enable_page_level_ads: true
-     });
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4300142452651464",
+    enable_page_level_ads: true
+  });
 </script>
 
         <meta charset="utf-8">
@@ -34,10 +34,6 @@
         {!! Html::style('css/frontend/materialize.css') !!}
         {!! Html::style('css/frontend/style.css') !!}
 
-
-  
-  
-  
         <title>Blog: @yield('title')</title>
         @yield('custom-styles')      
     </head>
