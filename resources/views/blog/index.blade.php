@@ -38,7 +38,7 @@
     </div>
 
      <div class="post-thumbnail-area">
-      <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}" alt="{{$post->featured_image_alt_text}}" />
+      <a href="{{ route('blog.single',$post->slug) }}"><img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}" alt="{{$post->featured_image_alt_text}}" /></a>
     </div>
    
     <div class="post-content-area">
