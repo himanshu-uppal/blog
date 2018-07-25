@@ -37,9 +37,10 @@
       <a href="{{ route('blog.single',$post->slug) }}"><h1 style="font-family:{{$post->font->name}};">{{ $post->title }} </h1></a>
     </div>
 
-     <div class="post-thumbnail-area">
-      <a href="{{ route('blog.single',$post->slug) }}"><img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}" alt="{{$post->featured_image_alt_text}}" /></a>
+     <a href="{{ route('blog.single',$post->slug) }}"><div class="post-thumbnail-area">
+      <img class="post-thumbnail" src="{{ route('image.show',$post->featured_image) }}" alt="{{$post->featured_image_alt_text}}" />
     </div>
+    </a>
    
     <div class="post-content-area">
 
