@@ -5,6 +5,11 @@
 <meta property="og:title" content="{{ $post->title }}" />
 <meta property="og:image" content="{{ route('image.show',[$post->featured_image]) }}" />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="{{ route('blog.single',$post->slug) }}" />
+
+<meta name="description" content="lifeinsidebraces">
+<meta name="keywords" content="lifeinsidebraces,blogger,india,programming,himanshu,uppal">
+<meta name="author" content="Himanshu Uppal">
 @endsection
 
 
