@@ -11,7 +11,7 @@ class BlogController extends Controller
 {
 
     public function getIndex(){
-        $posts= Post::orderBy('id','DESC')->where('type','=',0)->simplePaginate(6);
+        $posts= Post::orderBy('id','DESC')->where('type','=',0)->simplePaginate(5);
         //$recommended_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
         $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
         

@@ -2,7 +2,7 @@
 
 @section('share-meta')
 <meta property="og:title" content="lifeinisidebraces" />
- {{-- <meta property="og:image" content="{{ route('image.show',[$post->featured_image]) }}" />  --}}
+ {{-- <meta property="og:image" content="{{ route('image.show','logo.jpg') }}" />  --}}
 <!-- update image name for blog logo -->
 <meta property="og:type" content="website" />
 @endsection
