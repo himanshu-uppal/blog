@@ -5,7 +5,7 @@
   <div class="header-banner">
     <div class="header-image-area">
       <a href="{{ route('blog.index') }}">
-        <img class="header-image" src="{{ route('image.show','logo.jpg') }}" alt="lifeinsidebraces programming coding life.inside.braces Himanshu ">
+        <img class="header-image" src="{{ route('image.show','logo.jpg') }}" alt="lifeinsidebraces programming coding blogger food travel songs life.inside.braces Himanshu Uppal ">
       </a>
 </div>    
   </div>
@@ -50,7 +50,7 @@
           -lorem ipsum is lorem hitvh
         </div> 
        <div >
-          <img class="page-header-image" src="images/title.png" />
+          <img class="page-header-image" src="images/title.png" alt="lifeinsidebraces programming coding blogger food travel songs life.inside.braces Himanshu Uppal " />
        
         </div> 
 
