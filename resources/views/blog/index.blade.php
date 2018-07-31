@@ -2,9 +2,13 @@
 
 @section('share-meta')
 <meta property="og:title" content="lifeinisidebraces" />
- {{-- <meta property="og:image" content="{{ route('image.show','logo.jpg') }}" />  --}}
+<meta property="og:image" content="{{ route('image.show','logo.jpg') }}" />  
 <!-- update image name for blog logo -->
 <meta property="og:type" content="website" />
+
+<meta name="description" content="lifeinsidebraces">
+<meta name="keywords" content="lifeinsidebraces,blogger,india,food,travel,songs,programming,himanshu,uppal">
+<meta name="author" content="Himanshu Uppal">
 @endsection
 
 @section('title', "| Home")

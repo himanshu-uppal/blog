@@ -8,7 +8,7 @@
 <meta property="og:url" content="{{ route('blog.single',$post->slug) }}" />
 
 <meta name="description" content="lifeinsidebraces">
-<meta name="keywords" content="lifeinsidebraces,blogger,india,programming,himanshu,uppal">
+<meta name="keywords" content="lifeinsidebraces,blogger,india,food,travel,songs,programming,himanshu,uppal">
 <meta name="author" content="Himanshu Uppal">
 @endsection
 
