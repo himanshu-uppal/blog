@@ -26,7 +26,31 @@
           <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Allura|Bilbo|Dawning+of+a+New+Day|Dynalight|Engagement|Euphoria+Script|Fredericka+the+Great|Gaegu|Italianno|Just+Me+Again+Down+Here|Kanit|League+Script|Lovers+Quarrel|Monsieur+La+Doulaise|Mr+De+Haviland|Mrs+Saint+Delafield|Nosifer|Oregano|Pacifico|Parisienne|Qwigley|Rancho|Rouge+Script|Ruthie|Sacramento|Sail|Satisfy|Vibur|Yesteryear" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gurajada" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Flamenco|Germania+One|Mallanna" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
       <!--Import CKEDITOR-->
       <script src="http://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
 
