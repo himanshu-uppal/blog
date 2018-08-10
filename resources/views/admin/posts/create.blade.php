@@ -31,6 +31,24 @@
 		</div>
 		<div class="row">
 			<div class="input-field col s6">
+				{{ Form::label('author_name','Post Author Name')}}
+				{{ Form::text('author_name') }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				{{ Form::label('author_social_link','Post Author Social Link(In http:// format)')}}
+				{{ Form::text('author_social_link') }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				{{ Form::label('title','Post Title')}}
+				{{ Form::text('title',null,array('class'=>'validate','data-parsley-required'=>'')) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
 				{{ Form::label('slug','Slug:')}}
 				{{ Form::text('slug',null,array('class'=>'validate','data-parsley-required'=>'')) }}
 			</div>

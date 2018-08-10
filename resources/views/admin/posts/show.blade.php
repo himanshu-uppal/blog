@@ -12,7 +12,7 @@
 		<div class="col s7">
 	<h5>{{ $post->title }}</h5>
 	<p>{{ $post->tags }}</p>
-	<p>{{ $post->admin->name }}</p>
+	<p>{{ $post->author_name }}</p>
 	<p>
 	{{ date('F d, Y', strtotime($post->published_at)) }}
 

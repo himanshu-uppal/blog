@@ -35,7 +35,7 @@
 			@foreach($posts as $post)
 	<tr>
 		<th>{{ $post->id }}</th>
-		<td>{{ $post->admin->name }}</td>
+		<td>{{ $post->author_name }}</td>
 		<td>{{ $post->title }}</td>
 		<td><a href="{{ route('blog.single',$post->slug)}}">{{ $post->slug }}</a></td>
 		<td>{{ date('F d, Y', strtotime($post->created_at)) }}</td>
