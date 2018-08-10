@@ -73,10 +73,13 @@
     
      <div class="post-meta">
       <div class="row">
-     <div class="col l6 s6 m6 left-align">
+     <div class="col l4 s12 m12 left-align">
       
       </div>
-      <div class="col l6 s6 m6 right-align">
+      <div class="col l8 s12 m12 right-align">
+        @if($post->author_name != '')
+    <a target="_blank" href="{{$post->author_social_link}}">{{$post->author_name}}</a>,
+    @endif
        {{ date('F d, Y', strtotime($post->published_at)) }}
       </div>
     </div>
