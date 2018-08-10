@@ -81,6 +81,8 @@ class PostController extends Controller
 
         $post = new Post();
         $post->admin_id = Auth::user()->id;
+        $post->author_name=$request->author_name;
+        $post->author_social_link=$request->author_social_link;
         $post->title=$request->title;
         $post->slug = $request->slug;
         $post->content=$request->body;
@@ -184,6 +186,8 @@ return view('admin.posts.edit')->withPost($post)->withFonts($fonts)->withCategor
        $this->authorize('update', $post);
 
         $post->title=$request->title;
+        $post->author_name=$request->author_name;
+        $post->author_social_link=$request->author_social_link;
         $post->slug = $request->slug;
         $post->content=$request->content;
         $post->excerpt=$request->excerpt;
