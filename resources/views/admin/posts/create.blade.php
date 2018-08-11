@@ -41,12 +41,7 @@
 				{{ Form::text('author_social_link') }}
 			</div>
 		</div>
-		<div class="row">
-			<div class="input-field col s6">
-				{{ Form::label('title','Post Title')}}
-				{{ Form::text('title',null,array('class'=>'validate','data-parsley-required'=>'')) }}
-			</div>
-		</div>
+		
 		<div class="row">
 			<div class="input-field col s6">
 				{{ Form::label('slug','Slug:')}}
