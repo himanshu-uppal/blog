@@ -4,10 +4,10 @@
     <div class="about-blog">
       <div class="row">
       <center><h4>About {life}</h4></center>
-    </div>{{--
+    </div>
       <div class="row center">
-        <img class="about-image" src="{{ route('image.show','image3.jpg') }}" alt="lifeinsidebraces programming coding life.inside.braces Himanshu " />
-      </div> --}}
+        <img class="about-image circle" src="{{ route('image.show','blog-logo.jpg') }}"   alt="lifeinsidebraces programming coding life.inside.braces Himanshu " />
+      </div> 
       <div class="row" style="font-family:Pacifico;font-size:large">
       <center><strong>The life we live</br>
         The code we write</br>
