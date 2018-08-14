@@ -14,8 +14,8 @@ class AddAuthorToPosts extends Migration
     public function up()
     {
         Schema::table('posts',function($table){
-            $table->string('author_name')->after('admin_id');
-            $table->string('author_social_link')->after('author_name');
+            $table->string('author_name')->nullable('true')->after('admin_id');
+            $table->string('author_social_link')->nullable('true')->after('author_name');
         });
     }
 
