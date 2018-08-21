@@ -48,13 +48,13 @@ class BlogController extends Controller
 
         
 
-
+    $categories = Category::all();
                     
 
     //$recommended_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
     $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->where('status','=',0)->take(3)->get();
     //return view('blog.single')->withPost($post)->withRecommendedPosts($recommended_posts)->withPopularPosts($popular_posts);
-    return view('blog.single')->withPost($post)->withPopularPosts($popular_posts);
+    return view('blog.single')->withPost($post)->withPopularPosts($popular_posts)->withCategories($categories);
     //return view('blog.template');
    }
 
