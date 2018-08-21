@@ -29,7 +29,7 @@
       
       <div class="row" style="font-family:Pacifico;font-size:large">
       @foreach($categories as $category)
-      @if($category->posts()->count() > 0 )
+      @if($category->posts()->where('type','=',0)->where('status','=',0)->count() > 0 )
         <a href="{{ route('blog.category',$category->category) }}">{{$category->category}}</a></br>
       @endif
        @endforeach
