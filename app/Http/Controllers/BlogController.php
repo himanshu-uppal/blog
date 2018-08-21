@@ -12,10 +12,10 @@ class BlogController extends Controller
 {
 
     public function getIndex(){
-        $posts= Post::orderBy('id','DESC')->where('type','=',0)->simplePaginate(5);
+        $posts= Post::orderBy('id','DESC')->where('type','=',0)->where('status','=',0)->simplePaginate(5);
 
         //$recommended_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
-        $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
+        $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->where('status','=',0)->take(3)->get();
         $categories = Category::all();
 
 
@@ -52,7 +52,7 @@ class BlogController extends Controller
                     
 
     //$recommended_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
-    $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
+    $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->where('status','=',0)->take(3)->get();
     //return view('blog.single')->withPost($post)->withRecommendedPosts($recommended_posts)->withPopularPosts($popular_posts);
     return view('blog.single')->withPost($post)->withPopularPosts($popular_posts);
     //return view('blog.template');
@@ -73,13 +73,13 @@ class BlogController extends Controller
         }
          //print_r($posts_id);
        
-         $posts = Post::whereIn('id', $posts_id)->simplePaginate(5);;
+         $posts = Post::whereIn('id', $posts_id)->where('type','=',0)->where('status','=',0)->simplePaginate(5);;
         // $posts->all();
                      
 
         
                    
-        $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
+        $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->where('status','=',0)->take(3)->get();
         return view('blog.archive')->withTitle($title)->withPosts($posts)->withPopularPosts($popular_posts)->withCategories($categories);
 
    }
