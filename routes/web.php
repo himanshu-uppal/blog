@@ -26,6 +26,7 @@ Route::group(['middleware'=>['web']],function(){
 	//Blog 
 	Route::get('blog/{slug}','BlogController@getSingle')->where('slug','[\w\d\-\_]+')->name('blog.single');
 	Route::get('blog','BlogController@getIndex')->name('blog.index');
+	Route::get('blog/category/{category}','BlogController@getCategoryPosts')->name('blog.category');
 
 	//Pages
 	Route::get('/', 'PagesController@getIndex')->name('index');

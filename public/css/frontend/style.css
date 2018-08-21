@@ -316,6 +316,9 @@ footer{
 .card-title{
   font-family: 'Titillium Web', sans-serif;
 }
+.side-categories{
+  padding: 2% 2% 2% 20%;
+}
 .recommended-posts{
   padding: 2%;
 }

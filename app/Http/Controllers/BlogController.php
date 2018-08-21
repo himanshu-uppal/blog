@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 use DB;
 
 
@@ -12,11 +13,14 @@ class BlogController extends Controller
 
     public function getIndex(){
         $posts= Post::orderBy('id','DESC')->where('type','=',0)->simplePaginate(5);
+
         //$recommended_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
         $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
-        
+        $categories = Category::all();
+
+
         //return view('blog.index')->withPosts($posts)->withRecommendedPosts($recommended_posts)->withPopularPosts($popular_posts);
-        return view('blog.index')->withPosts($posts)->withPopularPosts($popular_posts);
+        return view('blog.index')->withPosts($posts)->withPopularPosts($popular_posts)->withCategories($categories);
     }
    public function getSingle($slug){
 
@@ -52,5 +56,31 @@ class BlogController extends Controller
     //return view('blog.single')->withPost($post)->withRecommendedPosts($recommended_posts)->withPopularPosts($popular_posts);
     return view('blog.single')->withPost($post)->withPopularPosts($popular_posts);
     //return view('blog.template');
+   }
+
+   public function getCategoryPosts($category){
+    //print_r($category);
+        $category = Category::where('category','=',$category)->first();
+        $title = "Category :" + $category->category ;
+        $categories = Category::all();
+        //$posts = $category->posts();
+        $post_ids = DB::table('category_post')->select('post_id')->distinct()->where('category_id','=', $category->id)->get();
+         //print_r($post_ids);
+         $posts_id = array();
+         foreach($post_ids as $i)
+        {
+             $posts_id[] =  $i->post_id;
+        }
+         //print_r($posts_id);
+       
+         $posts = Post::whereIn('id', $posts_id)->simplePaginate(5);;
+        // $posts->all();
+                     
+
+        
+                   
+        $popular_posts = Post::orderBy('id','DESC')->where('type','=',0)->take(3)->get();
+        return view('blog.archive')->withTitle($title)->withPosts($posts)->withPopularPosts($popular_posts)->withCategories($categories);
+
    }
 }

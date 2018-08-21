@@ -22,6 +22,23 @@
     </div>
    
     <hr>
+    <div class="side-categories">
+      <div class="row">
+      <center><h4>Categories</h4></center>
+    </div>
+      
+      <div class="row" style="font-family:Pacifico;font-size:large">
+      @foreach($categories as $category)
+      @if($category->posts()->count() > 0 )
+        <a href="{{ route('blog.category',$category->category) }}">{{$category->category}}</a></br>
+      @endif
+       @endforeach
+       
+
+      
+    </div>
+    </div>
+    <hr>
     <div class="popular-posts">
     <div class="row">
       <center><h4>Popular Posts</h4></center>
